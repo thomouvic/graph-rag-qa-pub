@@ -1,6 +1,6 @@
 # SPARQL CoT + Graph-Walk Compression for Graph-RAG QA
 
-Reproduction code for the paper *"Structured Reasoning over Retrieval: SPARQL-Guided Graph-Walk Augmentation for Graph-RAG"*.
+Reproduction code for the paper *"The Reasoning Bottleneck in Graph-RAG: Structured Prompting and Context Compression for Multi-Hop QA"*.
 
 We evaluate two augmentations for multi-hop question answering over Graph-RAG systems:
 1. **SPARQL Chain-of-Thought prompting** -- decomposes questions into triple-pattern queries aligned with entity-relationship context
@@ -141,9 +141,9 @@ The experiment code in this repository is released under the MIT License. The bu
 ## Citation
 
 ```bibtex
-@inproceedings{anonymous2025sparql,
-  title={Structured Reasoning over Retrieval: SPARQL-Guided Graph-Walk Augmentation for Graph-RAG},
+@inproceedings{anonymous2026reasoning,
+  title={The Reasoning Bottleneck in Graph-RAG: Structured Prompting and Context Compression for Multi-Hop QA},
   author={Anonymous},
-  year={2025}
+  year={2026}
 }
 ```
