@@ -1,0 +1,26 @@
+# API keys
+.env
+
+# Generated experiment data
+experiments/
+summaries/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# IDE
+.vscode/
+.idea/
+.claude/
