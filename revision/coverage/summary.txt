@@ -1,0 +1,141 @@
+Bridging-entity coverage analysis
+=================================
+
+
+## hotpotqa
+  questions: 500
+  avg required entities per question: 3.0
+  avg entities present per question:  2.9
+  Coverage:
+    M1 substring of gold:    452/500 (90.4%)
+    M3 bridging entities:    441/500 (88.2%)
+
+--- 8B baseline (baseline_llama-3.1-8b-instant_temp0.3_keyword_theta0.5_hotpotqa_large_scale_20260218_101626.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    90.4% (452/500)
+    Cov accuracy:     69.9% (316/452)
+    NCov accuracy:    39.6% (19/48)
+    reasoning errors: 136    retrieval errors: 29    lucky: 19
+    reasoning share of errors: 82.4%    retrieval share: 17.6%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    88.2% (441/500)
+    Cov accuracy:     70.5% (311/441)
+    NCov accuracy:    40.7% (24/59)
+    reasoning errors: 130    retrieval errors: 35    lucky: 24
+    reasoning share of errors: 78.8%    retrieval share: 21.2%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         440  acc=70.7%
+    M1-only:         12  acc=41.7%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:          1  acc=0.0%   (entities present, gold paraphrased -- M1 undercount)
+    Neither:         47  acc=40.4%
+
+--- 70B baseline (baseline_llama-3.3-70b-versatile_temp0.3_keyword_theta0.5_hotpotqa_large_scale_20260218_110034.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    90.4% (452/500)
+    Cov accuracy:     81.6% (369/452)
+    NCov accuracy:    43.8% (21/48)
+    reasoning errors: 83    retrieval errors: 27    lucky: 21
+    reasoning share of errors: 75.5%    retrieval share: 24.5%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    88.2% (441/500)
+    Cov accuracy:     82.3% (363/441)
+    NCov accuracy:    45.8% (27/59)
+    reasoning errors: 78    retrieval errors: 32    lucky: 27
+    reasoning share of errors: 70.9%    retrieval share: 29.1%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         440  acc=82.5%
+    M1-only:         12  acc=50.0%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:          1  acc=0.0%   (entities present, gold paraphrased -- M1 undercount)
+    Neither:         47  acc=44.7%
+
+## 2wikimultihopqa
+  questions: 500
+  avg required entities per question: 4.0
+  avg entities present per question:  3.5
+  Coverage:
+    M1 substring of gold:    405/500 (81.0%)
+    M3 bridging entities:    330/500 (66.0%)
+
+--- 8B baseline (baseline_llama-3.1-8b-instant_temp0.3_keyword_theta0.5_2wikimultihopqa_large_scale_20260220_193514.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    81.0% (405/500)
+    Cov accuracy:     32.1% (130/405)
+    NCov accuracy:    28.4% (27/95)
+    reasoning errors: 275    retrieval errors: 68    lucky: 27
+    reasoning share of errors: 80.2%    retrieval share: 19.8%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    66.0% (330/500)
+    Cov accuracy:     39.7% (131/330)
+    NCov accuracy:    15.3% (26/170)
+    reasoning errors: 199    retrieval errors: 144    lucky: 26
+    reasoning share of errors: 58.0%    retrieval share: 42.0%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         301  acc=36.9%
+    M1-only:        104  acc=18.3%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:         29  acc=69.0%   (entities present, gold paraphrased -- M1 undercount)
+    Neither:         66  acc=10.6%
+
+--- 70B baseline (baseline_llama-3.3-70b-versatile_temp0.3_keyword_theta0.5_2wikimultihopqa_large_scale_20260220_204350.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    81.0% (405/500)
+    Cov accuracy:     54.8% (222/405)
+    NCov accuracy:    23.2% (22/95)
+    reasoning errors: 183    retrieval errors: 73    lucky: 22
+    reasoning share of errors: 71.5%    retrieval share: 28.5%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    66.0% (330/500)
+    Cov accuracy:     63.9% (211/330)
+    NCov accuracy:    19.4% (33/170)
+    reasoning errors: 119    retrieval errors: 137    lucky: 33
+    reasoning share of errors: 46.5%    retrieval share: 53.5%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         301  acc=64.5%
+    M1-only:        104  acc=26.9%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:         29  acc=58.6%   (entities present, gold paraphrased -- M1 undercount)
+    Neither:         66  acc=7.6%
+
+## musique
+  questions: 500
+  avg required entities per question: 2.7
+  avg entities present per question:  2.3
+  Coverage:
+    M1 substring of gold:    385/500 (77.0%)
+    M3 bridging entities:    347/500 (69.4%)
+
+--- 8B baseline (baseline_llama-3.1-8b-instant_temp0.3_keyword_theta0.5_musique_large_scale_20260220_085621.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    77.0% (385/500)
+    Cov accuracy:     27.5% (106/385)
+    NCov accuracy:    10.4% (12/115)
+    reasoning errors: 279    retrieval errors: 103    lucky: 12
+    reasoning share of errors: 73.0%    retrieval share: 27.0%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    69.4% (347/500)
+    Cov accuracy:     30.0% (104/347)
+    NCov accuracy:    9.2% (14/153)
+    reasoning errors: 243    retrieval errors: 139    lucky: 14
+    reasoning share of errors: 63.6%    retrieval share: 36.4%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         347  acc=30.0%
+    M1-only:         38  acc=5.3%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:          0  acc=n/a   (entities present, gold paraphrased -- M1 undercount)
+    Neither:        115  acc=10.4%
+
+--- 70B baseline (baseline_llama-3.3-70b-versatile_temp0.3_keyword_theta0.5_musique_large_scale_20260220_073938.csv) ---
+  [M1: substring of final answer (original paper)]
+    coverage rate:    77.0% (385/500)
+    Cov accuracy:     40.3% (155/385)
+    NCov accuracy:    18.3% (21/115)
+    reasoning errors: 230    retrieval errors: 94    lucky: 21
+    reasoning share of errors: 71.0%    retrieval share: 29.0%
+  [M3: all bridging entities present (principled metric)]
+    coverage rate:    69.4% (347/500)
+    Cov accuracy:     43.8% (152/347)
+    NCov accuracy:    15.7% (24/153)
+    reasoning errors: 195    retrieval errors: 129    lucky: 24
+    reasoning share of errors: 60.2%    retrieval share: 39.8%
+  Disagreement matrix (M1 substring x M3 entities):
+    Both Y:         347  acc=43.8%
+    M1-only:         38  acc=7.9%   (gold appears, bridging entities missing -- eQxk's false-Y case)
+    M3-only:          0  acc=n/a   (entities present, gold paraphrased -- M1 undercount)
+    Neither:        115  acc=18.3%

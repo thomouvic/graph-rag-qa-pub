@@ -57,14 +57,25 @@ def run_cmd(cmd, cwd=None):
 
 # ── repo cloning ───────────────────────────────────────────────────
 
-def clone_repos(repo_dir: Path, ketrag_dir: Path):
-    """Ensure KET-RAG is present (bundled with this repo)."""
+def clone_repos(repo_dir: Path, ketrag_dir: Path, hippo_dir: Path):
+    """Clone KET-RAG and HippoRAG repos if not already present."""
+    hippo_dataset_dir = hippo_dir / "reproduce" / "dataset"
+
     if not (ketrag_dir / "pyproject.toml").exists():
-        raise FileNotFoundError(
-            f"KET-RAG not found at {ketrag_dir}. "
-            "It should be bundled with this repository."
-        )
-    print(f"KET-RAG present at {ketrag_dir}")
+        if ketrag_dir.exists():
+            shutil.rmtree(ketrag_dir)
+        _run(["git", "clone", "https://github.com/waetr/KET-RAG.git", str(ketrag_dir)])
+        print("Cloned KET-RAG")
+    else:
+        print(f"KET-RAG already present at {ketrag_dir}")
+
+    if not (hippo_dataset_dir / "hotpotqa.json").exists():
+        if hippo_dir.exists():
+            shutil.rmtree(hippo_dir)
+        _run(["git", "clone", "https://github.com/OSU-NLP-Group/HippoRAG.git", str(hippo_dir)])
+        print("Cloned HippoRAG")
+    else:
+        print(f"HippoRAG already present at {hippo_dir}")
 
 
 # ── KET-RAG patching ──────────────────────────────────────────────

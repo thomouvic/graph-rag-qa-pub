@@ -70,6 +70,13 @@ def parse_args():
                    default=DEFAULTS["baseline_temp"])
     p.add_argument("--semantic-threshold", type=float,
                    default=DEFAULTS["semantic_threshold"])
+    p.add_argument("--compression", default='none',
+                   choices=['none', 'gw', 'truncate', 'topk_embed'],
+                   help="Context compression mode. 'gw' = graph-walk (paper "
+                        "default when --graph-compress is set); 'truncate' = "
+                        "naive first-N-chars to budget; 'topk_embed' = top-k "
+                        "chunks by embedding similarity to the question; "
+                        "'none' = full retrieved context. eQxk #4 ablation.")
     p.add_argument("--graph-compress", action="store_true",
                    help="Compress context via graph-walk (keep chain-relevant entities/chunks)")
     p.add_argument("--graph-compress-hops", type=int, default=3,
@@ -81,6 +88,25 @@ def parse_args():
     p.add_argument("--skip-sparql",   action="store_true")
     p.add_argument("--skip-gated",    action="store_true")
     p.add_argument("--skip-generic-cot", action="store_true")
+    p.add_argument("--sparql-prompt-variant", default='generic',
+                   choices=['generic', 'musique_tuned'],
+                   help="SPARQL CoT prompt variant. 'musique_tuned' uses 6 "
+                        "worked demonstrations from Press et al. 2022 Table "
+                        "10 questions, reformatted as SPARQL CoT.")
+    p.add_argument("--run-self-ask", action="store_true",
+                   help="Run Self-Ask (Press et al. 2022) baseline. Opt-in.")
+    p.add_argument("--self-ask-demos-from", default='auto',
+                   choices=['auto', 'hotpotqa', '2wikimultihopqa', 'musique'],
+                   help="Override which dataset's Self-Ask demonstrations to use. "
+                        "'auto' (default) uses dataset-matched. Other values "
+                        "force prompt transfer (e.g., '2wikimultihopqa' on "
+                        "MuSiQue tests Press et al.'s Bamboogle precedent of "
+                        "no prompt tuning).")
+    p.add_argument("--self-ask-max-tokens", type=int, default=2048,
+                   help="Output budget cap for Self-Ask. Default 2048. "
+                        "Press et al. observe avg generated tokens of "
+                        "569 (2WikiMHQA) and 663 (MuSiQue), so 1000 is "
+                        "comfortable above the natural distribution.")
     p.add_argument("--skip-compare",    action="store_true")
     p.add_argument("--clean-checkpoints", action="store_true",
                    help="Delete checkpoint files before starting (fresh run)")
@@ -141,8 +167,16 @@ def main():
     s = args.strategy
     t = args.theta
     run_ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # Resolve compression mode early so tags reflect it. --graph-compress is
+    # backward-compat shorthand for --compression gw.
+    compression_mode = args.compression
+    if args.graph_compress and compression_mode == 'none':
+        compression_mode = 'gw'
+    compression_tag = '' if compression_mode == 'none' else f'_{compression_mode}'
+
     hybrid_tag = f"hybrid_vote{len(args.voter_models)}_vtemp{args.voter_temp}_{s}_theta{t}"
-    baseline_tag = f"baseline_{args.baseline_model}_temp{args.baseline_temp}_{s}_theta{t}"
+    baseline_tag = f"baseline{compression_tag}_{args.baseline_model}_temp{args.baseline_temp}_{s}_theta{t}"
 
     print(f"=== KET-RAG Run ===")
     print(f"Experiment: {key}")
@@ -162,8 +196,9 @@ def main():
     from qa_pipeline import (
         load_ket_records, record_to_qid_ctx,
         run_baseline_single_model, run_hybrid, run_sparql, run_generic_cot,
-        run_gated, add_eval_column, error_analysis, call_groq_chat,
-        build_graph_compressed_context_lookup,
+        run_self_ask, run_gated, add_eval_column, error_analysis,
+        call_groq_chat, build_graph_compressed_context_lookup,
+        build_truncated_context_lookup, build_topk_embedding_context_lookup,
     )
     from groq import Groq
     from sentence_transformers import SentenceTransformer
@@ -206,6 +241,8 @@ def main():
     # --- Load QA pairs ---
     qa_path = root / "qa-pairs" / "qa-pairs.json"
     qa_list = json.loads(qa_path.read_text(encoding="utf-8"))
+    if args.limit:
+        qa_list = qa_list[:args.limit]
     print(f"\nLoaded {len(qa_list)} QA pairs")
 
     missing_ctx = [str(q["id"]) for q in qa_list
@@ -216,17 +253,39 @@ def main():
 
     paths["summaries"].mkdir(parents=True, exist_ok=True)
 
-    # --- Graph-walk context compression ---
-    if args.graph_compress:
-        print("=== GRAPH-WALK CONTEXT COMPRESSION ===")
-        context_lookup, gw_stats = build_graph_compressed_context_lookup(
+    # --- Context compression ---
+    budget = args.graph_compress_budget
+
+    if compression_mode == 'gw':
+        print(f"=== GRAPH-WALK CONTEXT COMPRESSION (budget={budget}) ===")
+        context_lookup, comp_stats = build_graph_compressed_context_lookup(
             qa_list, context_lookup,
             max_hops=args.graph_compress_hops,
-            budget_tokens=args.graph_compress_budget,
+            budget_tokens=budget,
         )
-        print(f"  avg words: {gw_stats['avg_orig']:.0f} -> {gw_stats['avg_new']:.0f}"
-              f"  (compressed={gw_stats['n_compressed']}, fallback={gw_stats['n_fallback']})")
-        print(f"  avg seeds={gw_stats['avg_seeds']:.1f}  avg chain={gw_stats['avg_chain']:.1f}")
+        print(f"  avg words: {comp_stats['avg_orig']:.0f} -> {comp_stats['avg_new']:.0f}"
+              f"  (compressed={comp_stats['n_compressed']}, fallback={comp_stats['n_fallback']})")
+        print()
+    elif compression_mode == 'truncate':
+        print(f"=== TRUNCATION COMPRESSION (budget={budget}) ===")
+        context_lookup, comp_stats = build_truncated_context_lookup(
+            qa_list, context_lookup, budget_tokens=budget,
+        )
+        print(f"  avg words: {comp_stats['avg_orig']:.0f} -> {comp_stats['avg_new']:.0f}")
+        print()
+    elif compression_mode == 'topk_embed':
+        print(f"=== TOP-K EMBEDDING COMPRESSION (budget={budget}) ===")
+        # Reuse the embedder loaded for hybrid voting
+        try:
+            embedder
+        except NameError:
+            from sentence_transformers import SentenceTransformer
+            embedder = SentenceTransformer("all-MiniLM-L6-v2")
+        context_lookup, comp_stats = build_topk_embedding_context_lookup(
+            qa_list, context_lookup, embedder, budget_tokens=budget,
+        )
+        print(f"  avg words: {comp_stats['avg_orig']:.0f} -> {comp_stats['avg_new']:.0f}"
+              f"  avg chunks kept: {comp_stats['avg_chunks_kept']:.1f}/{comp_stats['avg_chunks_total']:.1f}")
         print()
 
     # --- Checkpoint setup ---
@@ -247,8 +306,8 @@ def main():
     # --- Baseline ---
     df_baseline = None
     if not args.skip_baseline:
-        print(f"=== BASELINE: {args.baseline_model} ===")
-        results_dir = root / "results_baseline_groq"
+        print(f"=== BASELINE [compression={compression_mode}]: {args.baseline_model} ===")
+        results_dir = root / f"results_baseline{compression_tag}_groq"
         results_dir.mkdir(parents=True, exist_ok=True)
         out_path = results_dir / f"{baseline_tag}_{safe_key}_{run_ts}.csv"
 
@@ -324,16 +383,25 @@ def main():
     # --- SPARQL ---
     df_sparql = None
     if not args.skip_sparql:
-        print(f"=== SPARQL: {args.baseline_model} ===")
-        results_dir = root / "results_sparql_groq"
+        variant = args.sparql_prompt_variant
+        variant_tag = '' if variant == 'generic' else f'_{variant}'
+        full_tag = f"{variant_tag}{compression_tag}"
+        print(f"=== SPARQL [{variant}, compression={compression_mode}]: {args.baseline_model} ===")
+        results_dir = root / f"results_sparql{full_tag}_groq"
         results_dir.mkdir(parents=True, exist_ok=True)
-        sparql_tag = f"sparql_{args.baseline_model}_temp{args.baseline_temp}_{s}_theta{t}"
+        sparql_tag = f"sparql{full_tag}_{args.baseline_model}_temp{args.baseline_temp}_{s}_theta{t}"
         out_path = results_dir / f"{sparql_tag}_{safe_key}_{run_ts}.csv"
+
+        ckpt_key = f"sparql{full_tag}"
+        ckpt[ckpt_key] = ckpt_dir / f"{ckpt_key}.jsonl"
+        if args.clean_checkpoints and ckpt[ckpt_key].exists():
+            ckpt[ckpt_key].unlink()
 
         df_sparql = run_sparql(
             groq_client, args.baseline_model, qa_list,
             context_lookup, temperature=args.baseline_temp,
-            limit=args.limit, checkpoint_path=ckpt["sparql"],
+            limit=args.limit, checkpoint_path=ckpt[ckpt_key],
+            prompt_variant=variant,
         )
         df_sparql["experiment"] = key
         df_sparql = add_eval_column(groq_client, args.eval_model, df_sparql)
@@ -385,6 +453,49 @@ def main():
         print(f"  n={len(df_generic_cot)}")
     else:
         print("[skip] Generic CoT")
+
+    print()
+
+    # --- Self-Ask (Press et al. 2022) ---
+    df_self_ask = None
+    if args.run_self_ask:
+        demos_from = args.self_ask_demos_from
+        demos_dataset = None if demos_from == 'auto' else demos_from
+        max_tok = args.self_ask_max_tokens
+        # Tag the output dir/files when using non-auto demos OR non-default
+        # max_tokens so we don't collide with prior runs.
+        demos_tag = '' if demos_from == 'auto' else f'_demos-{demos_from}'
+        maxtok_tag = '' if max_tok == 2048 else f'_maxtok{max_tok}'
+        run_tag = f"{demos_tag}{maxtok_tag}"
+        print(f"=== SELF-ASK (Press et al. 2022, demos={demos_from}, max_tokens={max_tok}): {args.baseline_model} ===")
+        results_dir = root / f"results_self_ask{run_tag}_groq"
+        results_dir.mkdir(parents=True, exist_ok=True)
+        self_ask_tag = f"self_ask{run_tag}_{args.baseline_model}_temp{args.baseline_temp}_{s}_theta{t}"
+        out_path = results_dir / f"{self_ask_tag}_{safe_key}_{run_ts}.csv"
+
+        ckpt_key = f"self_ask{run_tag}"
+        ckpt[ckpt_key] = ckpt_dir / f"{ckpt_key}.jsonl"
+        if args.clean_checkpoints and ckpt[ckpt_key].exists():
+            ckpt[ckpt_key].unlink()
+
+        df_self_ask = run_self_ask(
+            groq_client, args.baseline_model, qa_list,
+            context_lookup, args.dataset, temperature=args.baseline_temp,
+            limit=args.limit, checkpoint_path=ckpt[ckpt_key],
+            demos_dataset=demos_dataset,
+            max_tokens=max_tok,
+        )
+        df_self_ask["experiment"] = key
+        df_self_ask = add_eval_column(groq_client, args.eval_model, df_self_ask)
+        df_self_ask.to_csv(out_path, index=False)
+        print(f"Saved: {out_path}")
+
+        sa_acc = acc(df_self_ask["eval_verdict"])
+        sa_abstain = float(df_self_ask["final_abstain"].astype(bool).mean())
+        print(f"  Accuracy: {sa_acc:.3f}  Abstain rate: {sa_abstain:.3f}")
+        print(f"  n={len(df_self_ask)}")
+    else:
+        print("[skip] Self-Ask (use --run-self-ask to enable)")
 
     print()
 

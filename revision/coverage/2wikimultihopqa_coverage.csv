@@ -1,0 +1,501 @@
+id,question,gold,n_entities,n_entities_present,all_entities_present,substring_covered,context_chars
+9d054e980bdd11eba7f7acde48001122,Where does Juan Carlos Gumucio's wife work at?,Sunday Times,3,3,True,True,43770
+5cbb015f087511ebbd67ac1f6bf848b6,"Which film has the director died later, The Glass Wall or Where Does It Hurt??",Where Does It Hurt?,6,4,False,True,40812
+435f65fa0baf11ebab90acde48001122,Who is the father-in-law of Sisowath Kossamak?,Norodom Sutharot,3,3,True,True,34389
+607cb64a0bde11eba7f7acde48001122,Where did Binyamin Ze'Ev Kahane's father die?,Manhattan,3,3,True,True,38322
+8474fb5e08a811ebbd7fac1f6bf848b6,"Which film has the director who died later, Jára Cimrman Lying, Sleeping or Mr. Ace?","Jára Cimrman Lying, Sleeping",6,6,True,True,38615
+0c39da2e085811ebbd5aac1f6bf848b6,"Which film has the director who is older, Four Days In November or The Romance Of Tarzan?",The Romance Of Tarzan,6,3,False,True,38551
+6a419ba2087611ebbd67ac1f6bf848b6,"Which film has the director who is older than the other, Ven Mi Corazón Te Llama or Waking The Dead (Film)? ",Ven Mi Corazón Te Llama,6,5,False,True,39197
+843ef89008fa11ebbdacac1f6bf848b6,"Who is younger, Denise Kandel or Bruce Robinson?",Bruce Robinson,4,2,False,False,40388
+f48d94d00bd911eba7f7acde48001122,When did Marzuban Ibn Muhammad's father die?,953,3,3,True,True,35076
+3ab846860bde11eba7f7acde48001122,Where did the composer of film Camille (1926 Feature Film) die?,Ukiah,3,1,False,False,37011
+f775073c086b11ebbd60ac1f6bf848b6,Are both The Pledge (Film) and Mother Of George from the same country?,yes,4,4,True,True,42541
+a5a591200bdd11eba7f7acde48001122,Where did Ștefan I. Nenițescu's father study?,Leipzig University,3,3,True,True,37602
+bc5a9fef086c11ebbd61ac1f6bf848b6,"Who died later, Giovanni Dei Conti Di Segni or Sakari Simelius?",Sakari Simelius,4,4,True,True,37814
+c7417f2208d811ebbd9cac1f6bf848b6,Did R. D. Call and Taryn Power share the same nationality?,yes,3,3,True,False,38710
+3bb9c0740bb011ebab90acde48001122,Who is Sibyl Hathaway's child-in-law?,Mary Lawson,3,3,True,True,39303
+7c7bf2d308c011ebbd8aac1f6bf848b6,"Which film has the director who died earlier, Notes On The Port Of St. Francis or De Luxe Annie?",De Luxe Annie,6,5,False,True,38388
+6bb80b9c087b11ebbd68ac1f6bf848b6,"Who is younger, Ebtissam Mohamed or Beekman Du Barry?",Ebtissam Mohamed,4,4,True,True,42648
+9aa8008408de11ebbd9eac1f6bf848b6,"Which film has the director born later, Christ Walking On The Water or 45 Fathers?",45 Fathers,6,4,False,True,39008
+f34d188608cb11ebbd93ac1f6bf848b6,"Which film has the director who was born later, Playing It Wild or I'Ll Be Going Now?",I'Ll Be Going Now,7,4,False,True,38565
+47bb70600bde11eba7f7acde48001122,Which country the performer of song I Like Control is from?,American,3,3,True,True,42162
+69c0bb76087711ebbd67ac1f6bf848b6,"Which film has the director who was born first, Autumn Tale or Secrets Of The Reef?",Autumn Tale,7,5,False,True,38285
+31df8b0a0bde11eba7f7acde48001122,What is the place of birth of Anne Elizabeth Rector's husband?,Jersey City,3,2,False,False,42396
+ea3ca41f09b811ebbdb0ac1f6bf848b6,Are Puka Puka (Chumbivilcas) and Inka Pirqa both located in the same country?,yes,3,3,True,False,38873
+ec5882f008bb11ebbd88ac1f6bf848b6,"Which film has the director who was born later, The Devil And Miss Jones or The Man In The Funny Suit?",The Man In The Funny Suit,6,4,False,True,39814
+2084260e0bde11eba7f7acde48001122,Where did Theodore Salisbury Woolsey's father study?,Yale College,3,3,True,True,40262
+b66d42be0bdd11eba7f7acde48001122,Where was the place of death of Neferneferure's mother?,Amarna,3,3,True,True,39306
+a5e0af240bda11eba7f7acde48001122,Where was the place of death of the director of film The Song Of The Old Days?,Yerevan,3,1,False,False,40394
+381f9d94086811ebbd5eac1f6bf848b6,"Who is younger, Alfred Staines or George Sidney?",George Sidney,4,4,True,True,43628
+1691ef940bdb11eba7f7acde48001122,Which country Benjamin Pierce Cheney Jr.'s wife is from?,Canadian,3,2,False,False,39783
+b0b2952008d311ebbd96ac1f6bf848b6,"Who was born later, Mickey Hart or Tony Owen?",Tony Owen,4,4,True,True,38295
+9cdcbb3e0bda11eba7f7acde48001122,Where did the director of film Ave Caesar! die?,London,3,3,True,True,38184
+6152f66c08df11ebbda0ac1f6bf848b6,"Which film has the director who was born later, Bárbara Atómica or Three Lucky Fools?",Bárbara Atómica,6,5,False,True,40742
+29524701085711ebbd5aac1f6bf848b6,"Which film has the director who died first, Karin Daughter Of Ingmar or The Man In The Trunk?",The Man In The Trunk,7,5,False,True,39328
+49ba338e08b511ebbd88ac1f6bf848b6,"Which film was released more recently, Die Mutter or Where Are You Going All Naked??",Where Are You Going All Naked?,4,4,True,True,41974
+e140bb540bda11eba7f7acde48001122,Where was the place of death of Princess Yolanda Of Savoy's father?,"Alexandria, Egypt",3,2,False,False,40149
+4e9561d40bd911eba7f7acde48001122,What is the place of birth of Marisabel Rodríguez De Chávez's husband?,Sabaneta,3,3,True,True,41121
+9f3d48340bdb11eba7f7acde48001122,Where was the place of death of Licinia Eudoxia's father?,Constantinople,3,3,True,True,39589
+acb9940c0bdd11eba7f7acde48001122,What is the cause of death of director of film Destination: Dewsbury?,Parkinson's disease,3,2,False,False,41422
+7f7046d308f711ebbdaaac1f6bf848b6,Who was born first out of Aivar Kuusmaa and Andy Summers?,Andy Summers,4,4,True,True,37540
+7d84cc78086411ebbd5eac1f6bf848b6,"Which film has the director born first, A.P.E.X. or Quax In Africa?",Quax In Africa,6,4,False,True,37194
+6352d6c208d111ebbd95ac1f6bf848b6,"Which film was released more recently, Bollywood Dream or Pretty Persuasion?",Bollywood Dream,4,4,True,True,38831
+095c87880bdd11eba7f7acde48001122,Which country Al-Mu'Tasim's father is from?,Abbasid Caliphate,3,3,True,True,38653
+a4f725e5088c11ebbd6fac1f6bf848b6,"Which film was released more recently, Shravana Banthu or Hitler'S Folly?",Hitler'S Folly,4,4,True,True,38492
+bec5cebe0bdc11eba7f7acde48001122,Where did the director of film That Nazty Nuisance die?,"Orlando, Florida",3,3,True,True,38946
+13476e200bdd11eba7f7acde48001122,What is the place of birth of the director of film The Blue And White Lion?,Berlin,3,3,True,True,39969
+1d77753308bf11ebbd8aac1f6bf848b6,Are Geneviève Pettersen and Edward Peghin from the same country?,yes,4,4,True,True,40887
+fe2dd4b20bdb11eba7f7acde48001122,Who is the spouse of the director of film The Glass Boat?,Käthe von Nagy,3,2,False,False,38593
+3b1002a40bde11eba7f7acde48001122,"What is the date of death of Edward Wingfield, 2Nd Viscount Powerscourt's father?",21 October 1751,3,3,True,True,36746
+ee702173086311ebbd5eac1f6bf848b6,"Which film has the director who was born earlier, Pod Banderą Miłości or World In My Corner?",Pod Banderą Miłości,6,5,False,True,41976
+d58ede7c086e11ebbd62ac1f6bf848b6,"Which film has the director who was born first, The Parson And The Outlaw or The Black Marble?",The Parson And The Outlaw,7,4,False,True,41945
+482773fc0baf11ebab90acde48001122,Who is Robert Vere Buxton's paternal grandfather?,"Sir Edward Buxton, 2nd Baronet",3,3,True,True,35652
+f1a794f20bdc11eba7f7acde48001122,What nationality is Lamprocles's father?,Athenian,3,2,False,False,36985
+88cc034008c211ebbd8cac1f6bf848b6,Are the directors of both films The Knockout Kid and One Nine Nine Four from the same country?,no,6,6,True,True,40604
+421d07aa0bb011ebab90acde48001122,Who is Marianus V Of Arborea's mother?,Eleanor of Arborea,3,3,True,True,41612
+1194abf60bb011ebab90acde48001122,Who is Eberhard Of Limburg's paternal grandfather?,Johann of Limburg,3,3,True,True,37252
+f7bae9100bdd11eba7f7acde48001122,Where did Elisa Godínez Gómez De Batista's husband die?,Marbella,3,3,True,True,38011
+98f734a60bdd11eba7f7acde48001122,Where was the place of death of Amaury De Montfort (Died 1241)'s father?,Toulouse,3,3,True,True,35908
+4ccfe12d08b811ebbd88ac1f6bf848b6,"Which film has the director born earlier, Mummy & Me or Gideon And Samson: Great Leaders Of The Bible?",Gideon And Samson: Great Leaders Of The Bible,6,6,True,True,38460
+828b1390093511ebbdaeac1f6bf848b6,"Which film was released more recently, Behind Locked Doors or Crossing Delancey?",Crossing Delancey,4,4,True,True,42312
+2319739c0bde11eba7f7acde48001122,"What is the date of birth of John I, Duke Of Brunswick-Grubenhagen's mother?",1264,3,2,False,False,38771
+50e4a65c0bde11eba7f7acde48001122,Where was the performer of song B Boy (Song) detained?,State Correctional Institution – Chester,3,3,True,True,40479
+c4dffdf00bdd11eba7f7acde48001122,Which country the director of film Hardcase (1972 Film) is from?,Argentinian,3,2,False,False,37370
+fcd3ff500baf11ebab90acde48001122,Who is Teriimaevarua Iii's paternal grandmother?,Pōmare IV,3,2,False,False,37314
+19041a7f08e111ebbda2ac1f6bf848b6,"Who is younger, Halcón Suriano Jr. or Pierre De Geyter?",Halcón Suriano Jr.,4,4,True,True,38450
+0c24f02e08c711ebbd91ac1f6bf848b6,"Which film was released first, The Tender Years or Range War?",Range War,4,4,True,True,41613
+405c82e8094711ebbdaeac1f6bf848b6,"Which film was released first, Moonnam Pakkam or Tribute To The Teachers?",Tribute To The Teachers,4,4,True,True,39338
+a457e11c0bdb11eba7f7acde48001122,Who is the mother of the director of film Atomised (Film)?,Gisela Elsner,3,3,True,True,38458
+16b4c9fe0bdd11eba7f7acde48001122,What is the place of birth of the director of film Under The Cards?,Carcassonne,3,3,True,True,37844
+752f84c60bdb11eba7f7acde48001122,Where did Hasan Ibn Hasan's father die?,Medina,3,3,True,True,35379
+84d024380bdd11eba7f7acde48001122,Where was the place of death of the director of film Never The Twain (Film)?,"Hamburg, Germany",3,3,True,True,39912
+b73268780bdd11eba7f7acde48001122,What nationality is the director of film A Kiss On The Nose?,Greek,3,3,True,True,39250
+b4f937fa08cf11ebbd95ac1f6bf848b6,"Which film has the director died earlier, They Who Dare or False Pretenses?",They Who Dare,6,2,False,True,39345
+08776469088b11ebbd6fac1f6bf848b6,"Which film was released earlier, Karla'S World or Dharti?",Dharti,4,4,True,True,35957
+367ea308088211ebbd6dac1f6bf848b6,"Which film has the director died later, Calling Philo Vance or The Witch'S Curse?",The Witch'S Curse,7,7,True,True,40532
+43c910980bde11eba7f7acde48001122,When is Prince Raphael Rainer Of Thurn And Taxis's mother's birthday?,6 July 1870,3,2,False,False,38635
+3d4662300bb011ebab90acde48001122,Who is the maternal grandmother of Eleanor Of Brittany (Abbess)?,Eleanor of Provence,3,3,True,True,39651
+c213141e08e411ebbda4ac1f6bf848b6,"Which film was released earlier, Flash Gordon Conquers The Universe or Siti Noerbaja?",Flash Gordon Conquers The Universe,4,4,True,True,40410
+611ddbf80bdc11eba7f7acde48001122,What nationality is the director of film Two For Texas?,Australia,3,3,True,True,38981
+e15d99380bdd11eba7f7acde48001122,Where did the director of film Dancing In The Rain (Film) die?,Ljubljana,3,2,False,False,39465
+f998c58c091b11ebbdaeac1f6bf848b6,"Are both movies, Naked Tango and Algiers (Film), from the same country?",yes,3,3,True,False,40969
+d759ab480bdd11eba7f7acde48001122,Where was the place of death of Aleksandr Aleksandrovich Bibikov's father?,Bugulma,3,3,True,True,43037
+38c774800bdb11eba7f7acde48001122,"Where was the place of death of the director of film Tabitha, Stand Up?",Berlin,3,3,True,True,39921
+74df4c060bde11eba7f7acde48001122,What nationality is the director of film A Dog'S Purpose (Film)?,Swedish,3,3,True,True,40031
+3805416e0bde11eba7f7acde48001122,Where was the director of film The Ape (2005 Film) born?,Palo Alto,3,3,True,True,43700
+632fcc82085611ebbd59ac1f6bf848b6,Was Angus Wagner or Juan Carlos Falcón born first?,Juan Carlos Falcón,4,4,True,True,37222
+005238da0bde11eba7f7acde48001122,Which country the composer of song Cry Over Me is from?,American,3,3,True,True,39929
+753f68d40bde11eba7f7acde48001122,What is the place of birth of Archduchess Maria Immakulata Of Austria's mother?,Naples,3,3,True,True,42135
+8b9faa26089b11ebbd78ac1f6bf848b6,"Which film whose director is younger, Becoming Dick or Nude On The Moon?",Becoming Dick,6,5,False,True,40169
+0f97e1f3096f11ebbdb0ac1f6bf848b6,"Which film came out earlier, Two Brides And A Baby or Dinner At The Ritz?",Dinner At The Ritz,4,4,True,True,42544
+272062fc088c11ebbd6fac1f6bf848b6,"Which film has the director who is older than the other, The Inside Man (Film) or Dog'S Heart? ",Dog'S Heart,7,6,False,True,38162
+4aa59d960bde11eba7f7acde48001122,Which country the director of film Sarah Silverman: Jesus Is Magic is from?,United States,3,3,True,True,40875
+f7ff22da089011ebbd72ac1f6bf848b6,"Who lived longer, Louis Ncamiso Ndlovu or Raymond Balze?",Raymond Balze,6,6,True,True,39292
+776002d4090a11ebbdadac1f6bf848b6,"Which film was released earlier, Jazz Boat or Her Husband'S Trademark?",Her Husband'S Trademark,4,4,True,True,39776
+84c5154a0bdb11eba7f7acde48001122,What nationality is the performer of song Mimi (Song)?,French,3,3,True,True,42158
+b942cafc08c411ebbd8eac1f6bf848b6,"Which film has the director who was born later, Complete Unknown or Dr. Goldfoot And The Girl Bombs?",Complete Unknown,6,4,False,True,43417
+f20ae8a80bdd11eba7f7acde48001122,Where does Louisa Charlotte Tyndall's husband work at?,Royal Institution,3,3,True,True,40139
+375e7e4408c611ebbd90ac1f6bf848b6,"Which film has the director born later, Way...Way Out or The Biggest Show On Earth?",Way...Way Out,7,6,False,True,38897
+fc631640089711ebbd77ac1f6bf848b6,"Who was born later, Burhan Atak or Pepe Hern?",Pepe Hern,4,4,True,True,37265
+a8a18e800bdb11eba7f7acde48001122,Where did the composer of film Kadal (1968 Film) die?,Lakshadweep,3,3,True,True,39532
+904d037508ab11ebbd82ac1f6bf848b6,"Are both St. Mary'S School, Patiala and Apeejay Education Society located in the same country?",yes,3,3,True,False,41502
+a41c3c8808bc11ebbd89ac1f6bf848b6,"Who was born earlier, Ola Stunes Isene or Ruby Helder?",Ruby Helder,4,4,True,True,37666
+3e5ca16a0bd911eba7f7acde48001122,What is the date of death of the performer of song Goodbye Pork Pie Hat?,"January 5, 1979",3,3,True,True,42478
+897bcb4a0bb011ebab90acde48001122,Who is Jan Iii Of Oświęcim's paternal grandfather?,Jan I the Scholastic,3,3,True,True,35755
+73755d740bd911eba7f7acde48001122,What is the date of death of Fujiwara No Junshi's father?,31 July 989,3,3,True,True,36381
+0ce9a92008ed11ebbda7ac1f6bf848b6,"Did the movies Inside The Room and Crude Set Drama, originate from the same country?",yes,3,3,True,True,41298
+10b8d7940baf11ebab90acde48001122,Who is Edith Of Wessex's mother-in-law?,Emma,3,3,True,True,38425
+7d55f0e008d411ebbd96ac1f6bf848b6,Are both Cunaú River and Rio Verde (Mato Grosso Do Sul) located in the same country?,yes,3,3,True,False,36972
+31e34c220bde11eba7f7acde48001122,Where was the wife of Adam Włodek born?,Kórnik,3,3,True,True,37031
+3ac032da0baf11ebab90acde48001122,Who is the father-in-law of Từ Dụ?,Minh Mạng,3,3,True,True,36985
+cbbcad9a08d511ebbd98ac1f6bf848b6,"Which film has the director died later, Darkened Rooms or Future Zone?",Future Zone,6,4,False,True,40321
+a8f4816708ad11ebbd83ac1f6bf848b6,"Who lived longer, Bernhard Afinger or Melvin Kranzberg?",Melvin Kranzberg,6,6,True,True,39614
+86ea0e1e0bb011ebab90acde48001122,Who is the father-in-law of Ermengarde Of Hesbaye?,Charlemagne,3,2,False,False,36163
+a0027b6e087e11ebbd6bac1f6bf848b6,"Which film has the director born earlier, Comedy! or Ven Mi Corazón Te Llama?",Ven Mi Corazón Te Llama,6,5,False,True,37712
+896795760bb011ebab90acde48001122,Who is Tlilpotoncatzin's uncle?,Chimalpopoca,3,3,True,True,35568
+6854217908a011ebbd78ac1f6bf848b6,"Which film came out earlier, Marriage Blue or 4 Minute Mile?",Marriage Blue,4,4,True,True,42213
+b74ad1d208f511ebbdaaac1f6bf848b6,Was Jamie Curry or Alyaksey Vasilewski born first?,Alyaksey Vasilewski,4,4,True,True,36875
+5bdd3aec087d11ebbd6aac1f6bf848b6,"Which film whose director was born first, Return To Return To Nuke 'Em High Aka Volume 2 or Zameen (2003 Film)?",Return To Return To Nuke 'Em High Aka Volume 2,6,5,False,True,39996
+e7d5fd3708c811ebbd92ac1f6bf848b6,Are Carl Wijk and Anders Lindstedt from the same country?,yes,3,3,True,False,38066
+ac1b9ee108b911ebbd88ac1f6bf848b6,"Who was born later, Lisbeth Cathrine Amalie Rose or Princess Raiyah Bint Hussein?",Princess Raiyah Bint Hussein,4,4,True,True,36690
+5df2969e0baf11ebab90acde48001122,Who is Frederick Dickens's father?,John Dickens,3,3,True,True,39121
+faf6572008e411ebbda4ac1f6bf848b6,"Which film was released more recently, Nearly A Deserter or Face À L'Océan?",Face À L'Océan,4,4,True,True,39791
+29b6ef140bdd11eba7f7acde48001122,What is the place of birth of the director of film God Of War (Film)?,Hong Kong,3,2,False,False,41281
+5affe63d08f311ebbdaaac1f6bf848b6,"Which film was released earlier, Man'S Search For Happiness or Tell It To The Bees?",Man'S Search For Happiness,4,4,True,True,40599
+b665196708a611ebbd7fac1f6bf848b6,Who was born first out of Erick Chipeta and Praveen Agrawal?,Praveen Agrawal,4,4,True,True,39145
+0dc9691b087911ebbd67ac1f6bf848b6,"Which film has the director born later, Arrête Ton Cinéma or Agni (2004 Film)?",Arrête Ton Cinéma,6,5,False,True,37188
+655027de0bb011ebab90acde48001122,Who is the paternal grandfather of Hamad Bin Isa Al Khalifa?,Salman bin Hamad Al Khalifa,3,3,True,True,37378
+0c403ca20bdc11eba7f7acde48001122,"Where was the place of burial of Maria Of Austria, Duchess Of Jülich-Cleves-Berg's husband?",Düsseldorf,3,3,True,True,41404
+fdc90af60bda11eba7f7acde48001122,Where did the composer of song Aren'T You Kind Of Glad We Did? die?,Hollywood,3,3,True,True,39383
+cc1013260bdd11eba7f7acde48001122,Which country Aristarete's father is from?,Athens,3,3,True,True,38625
+b890f2420bd911eba7f7acde48001122,"Where was the place of death of the director of film Goodbye, Franziska (1941 Film)?",Castellina in Chianti,3,3,True,True,40561
+dc68effd08d811ebbd9cac1f6bf848b6,Who was born first out of Marco De Luigi and Fabio Maistro?,Marco De Luigi,4,4,True,True,36822
+8bb8b730085211ebbd58ac1f6bf848b6,"Which film has the director who was born earlier, Holiday In Tyrol or Las Aventuras De Pito Pérez?",Las Aventuras De Pito Pérez,7,6,False,True,39224
+fcdafe320bdb11eba7f7acde48001122,Where was the director of film The Circus Cyclone born?,"Oklahoma City, Oklahoma",3,3,True,True,38927
+322dc9a2087b11ebbd67ac1f6bf848b6,"Which film came out first, Girl From Hong Kong or Forces Occultes?",Forces Occultes,4,4,True,True,42301
+a96fec4c0bdd11eba7f7acde48001122,Where was the husband of Edadil Kadın born?,Constantinople,3,3,True,True,35646
+940af910087111ebbd63ac1f6bf848b6,"Which film whose director is younger, Chased By The Dogs or The Demise Of Herman Durer?",The Demise Of Herman Durer,6,5,False,True,38151
+d88af85e085a11ebbd5cac1f6bf848b6,"Which film has the director who died first, Everybody'S Hobby or One Sunday Afternoon (1948 Film)?",Everybody'S Hobby,6,5,False,True,42691
+5037e45b08cb11ebbd92ac1f6bf848b6,"Which film has the director born earlier, The Spooky Bunch or His Name Is Nobody?",His Name Is Nobody,6,4,False,True,40831
+5a34b04e0bd911eba7f7acde48001122,What nationality is Matilda Of Frisia's husband?,France,3,3,True,True,39852
+1e4d9f2008ff11ebbdadac1f6bf848b6,"Which film was released earlier, Donne Con Le Gonne or Hot Saturday?",Hot Saturday,4,4,True,True,38168
+cf918c0c0bdb11eba7f7acde48001122,What is the place of birth of the performer of song Dip (Song)?,Port of Spain,3,3,True,True,42725
+89cb4a26089511ebbd75ac1f6bf848b6,"Which film has the director who was born earlier, The Red Eagle or Vishukkani?",Vishukkani,6,6,True,True,39937
+9f2a95bd08b211ebbd85ac1f6bf848b6,"Which film has the director died first, Ask A Policeman or The Half-Naked Truth?",Ask A Policeman,6,4,False,True,40728
+3ed2ba7a0bda11eba7f7acde48001122,Who is the father of the director of film Power Of Women (Film)?,Jayavarman I,3,2,False,False,39605
+66cc23c40bdd11eba7f7acde48001122,What is the place of birth of the director of film 976-Evil Ii?,New York,3,3,True,True,37667
+f85a2ee0085d11ebbd5cac1f6bf848b6,Are both directors of films Spione and Five Million Look For An Heir from the same country?,yes,7,7,True,False,38427
+6faf10f40bde11eba7f7acde48001122,What nationality is Ameena Begum's husband?,Indian,3,3,True,True,38890
+86947bc20bdb11eba7f7acde48001122,Where did the composer of song The Queen Of Spades (Prokofiev) graduate from?,Saint Petersburg Conservatory,3,3,True,True,41408
+85dd56440baf11ebab90acde48001122,Who is Albert G. Simms's father-in-law?,Mark Hanna,3,2,False,False,40251
+efaaa1bc0bdc11eba7f7acde48001122,What is the place of birth of the director of film Forgotten Light?,Mladá Boleslav,3,3,True,True,39545
+cbb5ca82095411ebbdaeac1f6bf848b6,Are Bmw M and Mine Safety Appliances both located in the same country?,no,4,4,True,True,42513
+0f26cc3508a711ebbd7fac1f6bf848b6,"Are the movies The Brand New Testament and The Boss Of Rustler'S Roost, from the same country?",no,6,6,True,True,40917
+676bf7000bb011ebab90acde48001122,"Who is Eustace Iii, Count Of Boulogne's uncle?","Godfrey IV, Duke of Lower Lorraine",3,3,True,True,39101
+a9277caa0bdd11eba7f7acde48001122,What nationality is Lord Frederick Cavendish-Bentinck's father?,Great Britain,3,3,True,True,39963
+2e294eec0bde11eba7f7acde48001122,"What is the date of death of Ferdinand, Prince Of Solms-Braunfels's father?",24 February 1761,3,2,False,True,37403
+497c1bdb094911ebbdaeac1f6bf848b6,"Which album came out first, Sol Niger Within or The Magic Place?",Sol Niger Within,4,4,True,True,40930
+3617c14e0bdc11eba7f7acde48001122,What is the date of birth of Mohammed Bin Nawwaf Bin Abdulaziz's father?,16 August 1932,3,3,True,True,36941
+96e154420bda11eba7f7acde48001122,What is the place of birth of the performer of song Did It On'Em?,Port of Spain,3,3,True,True,41503
+6b6a5a7f092e11ebbdaeac1f6bf848b6,"Which film came out earlier, La Marca De Satanás or Sofia'S Last Ambulance?",La Marca De Satanás,4,4,True,True,39698
+ec9f313c08c211ebbd8cac1f6bf848b6,"Which film was released earlier, The Pistol: The Birth Of A Legend or Unborn In The Usa?",The Pistol: The Birth Of A Legend,4,4,True,True,40506
+b4e53bdc08c111ebbd8bac1f6bf848b6,"Which film has the director born earlier, Did A Good Man Die? or The Last Of The Knucklemen?",Did A Good Man Die?,6,5,False,True,39678
+bb97d66208ba11ebbd88ac1f6bf848b6,"Which film has the director who died later, 45 Calibre Echo or Bons Baisers De Hong Kong?",Bons Baisers De Hong Kong,6,4,False,True,38010
+81c09831088c11ebbd6fac1f6bf848b6,Were Jimmy Santiago Baca and Duane Armstrong from the same country?,yes,3,3,True,False,39229
+49b22d0a0bde11eba7f7acde48001122,Where did the composer of film The Straw Hat die?,Siversky,3,3,True,True,42252
+81e0d683087c11ebbd6aac1f6bf848b6,"Which film has the director who was born earlier, César And Rosalie or Beatrice (1987 Film)?",César And Rosalie,6,5,False,True,37616
+c531e7560baf11ebab90acde48001122,Who is Marie Zéphyrine Of France's paternal grandmother?,Marie Leszczyńska,3,3,True,True,38932
+20ad267b087411ebbd67ac1f6bf848b6,"Are the bands M3 (Band) and Cam-Pact, from the same country?",no,4,4,True,True,43111
+4b2a2efd08d811ebbd9aac1f6bf848b6,"Who lived longer, Clarence Moore (Businessman) or Wilhelmine Schröder-Devrient?",Wilhelmine Schröder-Devrient,6,6,True,True,41968
+a85c9b480bdd11eba7f7acde48001122,Where did Sigrid Sture's father die?,Uppsala,3,3,True,True,37039
+b8f13b3709b111ebbdb0ac1f6bf848b6,"Which song was released earlier, Wherever I Lay My Hat (That'S My Home) or Don'T Ya?",Wherever I Lay My Hat (That'S My Home),4,4,True,True,41210
+dd7bd1a6085c11ebbd5cac1f6bf848b6,Are the directors of both films Pretty Foe and Goin' Coconuts from the same country?,no,6,3,False,True,38793
+ecf5d7b60bdc11eba7f7acde48001122,What is the place of birth of the director of film Vent D'Est?,Liévin,3,2,False,False,38151
+b642318c0bdd11eba7f7acde48001122,Where was the place of death of Abdul-Aziz Bin Muhammad's father?,Diriyah,3,2,False,False,37913
+3b5e453a096611ebbdafac1f6bf848b6,Are Chorion (Company) and Elswick Ordnance Company located in the same country?,yes,3,3,True,False,41566
+f06252fc0bdd11eba7f7acde48001122,Which award the performer of song You Changed Me won?,Best Actor,3,3,True,True,39837
+a9c3d8b7085411ebbd59ac1f6bf848b6,"Who was born later, Shawn Lewfatt or Ken Karpoff?",Shawn Lewfatt,4,4,True,True,36547
+ace717d0088411ebbd6dac1f6bf848b6,"Which film has the director who is older than the other, Colierul De Turcoaze or Leo And Loree? ",Leo And Loree,6,4,False,True,39603
+583a6e45085c11ebbd5cac1f6bf848b6,Are both directors of films The Pit And The Pendulum (1913 Film) and How Sweet It Is! from the same country?,no,7,5,False,True,40596
+e5c738900bdc11eba7f7acde48001122,Where did the director of film Mary Jane'S Pa die?,New York,3,3,True,True,40098
+385c3978086f11ebbd62ac1f6bf848b6,"Which film has the producer who is older, Aatma Gowravam or Vitti Dandu?",Aatma Gowravam,6,4,False,True,36928
+d6898f78089511ebbd75ac1f6bf848b6,Are Vasilyevsky Island and Preobrazheniya Island located in the same country?,yes,3,3,True,False,39497
+ca0b4c4108e411ebbda4ac1f6bf848b6,"Who was born later, Guiomar Novaes or Abdul Nasser Al-Sayegh?",Abdul Nasser Al-Sayegh,4,4,True,True,38163
+2dd3bff80bda11eba7f7acde48001122,"When was Godfrey I, Count Of Verdun's mother born?",910,3,3,True,True,38193
+965e667e0bdd11eba7f7acde48001122,"When is Napier Sturt, 3Rd Baron Alington's father's birthday?",20 August 1859,4,4,True,True,37999
+ab622778089911ebbd77ac1f6bf848b6,"Which film has the director who is older than the other, Mektoub or Sail A Crooked Ship? ",Sail A Crooked Ship,6,4,False,True,38410
+32493228084911ebbd55ac1f6bf848b6,"Do both films, Afrika (Film) and Man From The Deep River, have the directors who are from the same country?",yes,5,5,True,False,37788
+44268f9c0bda11eba7f7acde48001122,What is the place of birth of the director of film Rufus Jones For President?,"New Brunswick, New Jersey",3,3,True,True,41651
+534fbfd00bd911eba7f7acde48001122,When did Margaret Kenyatta (Mayor)'s mother die?,2007,3,3,True,True,38200
+0f06923008d311ebbd96ac1f6bf848b6,"Which film whose director was born first, Bhaji On The Beach or Bugsy?",Bugsy,6,6,True,True,38750
+ab238f6a0bda11eba7f7acde48001122,What is the place of birth of the director of film Thiruvannamalai (Film)?,Nattarasankottai,3,3,True,True,37558
+e56744640bda11eba7f7acde48001122,Where did the director of film Yang ± Yin: Gender In Chinese Cinema study?,Hong Kong Baptist College,3,3,True,True,39880
+890017540bdb11eba7f7acde48001122,Who is the spouse of the director of film Days And Hours?,Jasna Žalica,3,2,False,False,37787
+2bd4454c0bda11eba7f7acde48001122,Where did the composer of film Before Sunset study?,Tisch,3,2,False,False,40856
+d501f7c40bdd11eba7f7acde48001122,What is the date of death of Mary Of Lancaster's mother?,1322,3,3,True,True,38017
+6ee6201a0bdc11eba7f7acde48001122,"Where was the place of death of Humphrey Stafford, Earl Of Stafford's father?",Northampton,3,3,True,True,38915
+9711615e08cf11ebbd95ac1f6bf848b6,"Which film has the director who is older than the other, Taming Of The Fire or The Lady Takes A Flyer? ",The Lady Takes A Flyer,7,5,False,True,39115
+462bb642099211ebbdb0ac1f6bf848b6,Are Marufabad and Nasamkhrali both located in the same country?,no,4,4,True,True,37925
+befd7f2008bf11ebbd8aac1f6bf848b6,"Who is younger, Amir Temraz or Sophie Ingle?",Sophie Ingle,4,4,True,True,37147
+fa5c70d4092711ebbdaeac1f6bf848b6,"Which album was released earlier, Freedom For The Stallion or In The Maybe World?",Freedom For The Stallion,4,4,True,True,39641
+90306af40bdd11eba7f7acde48001122,"Where was the place of burial of Medan, Son Of Abraham's father?",Cave of the Patriarchs,3,3,True,True,36099
+ed2119b608ae11ebbd83ac1f6bf848b6,"Who is older, Ryan Tubridy or Mauro Massironi?",Ryan Tubridy,4,4,True,True,39268
+7d638c340bd911eba7f7acde48001122,What is the place of birth of Richard Socarides's father?,"Brockton, Massachusetts",4,4,True,True,37111
+5d3230dc0bde11eba7f7acde48001122,Where was the husband of Ting-Xing Ye born?,"Toronto, Ontario",4,2,False,False,36781
+d7004d5c0bdb11eba7f7acde48001122,Where did the director of film Reverse (Film) study?,National Film School in Łódź,3,3,True,True,38799
+178a2b9408d611ebbd98ac1f6bf848b6,Was Shahanuddin Choudhury or Domenico Distilo born first?,Shahanuddin Choudhury,4,2,False,True,37977
+8c7fffe40bda11eba7f7acde48001122,Where was the father of Belgutei born?,Khamag Mongol,3,3,True,True,35933
+43a34d720bde11eba7f7acde48001122,Where was the father of Tony Bettenhausen Jr. born?,Tinley Park,3,3,True,True,38894
+308416280bb011ebab90acde48001122,"Who is Geoffrey Iii, Count Of Perche's paternal grandfather?","Rotrou III, Count of Perche",3,3,True,True,39604
+e7f8e98808a311ebbd7cac1f6bf848b6,"Which film whose director is younger, Kalippava or A Couch In New York?",A Couch In New York,6,5,False,True,36460
+c3bddf240baf11ebab90acde48001122,Who is Li Zhong's paternal grandmother?,Empress Zhangsun,3,3,True,True,38690
+cea1f56e0bdd11eba7f7acde48001122,What nationality is Huo Yi's father?,Eastern Han Dynasty,3,3,True,True,37307
+6c0db92c08e211ebbda4ac1f6bf848b6,"Which film whose director is younger, My Baby'S Daddy or A Tale Of Winter?",My Baby'S Daddy,6,5,False,True,38428
+990a177a08a311ebbd7bac1f6bf848b6,"Who was born first, Patrik Lácha or Brad Booth?",Brad Booth,4,4,True,True,38099
+027278700bdc11eba7f7acde48001122,Where was the place of death of the director of film A Rare Bird?,Le Plessis-Bouchard,3,3,True,True,40241
+1cf6b11808a111ebbd78ac1f6bf848b6,"Which film has the director born earlier, The Planet Of Junior Brown or A Yank In The R.A.F.?",A Yank In The R.A.F.,7,5,False,True,42003
+433bcf3d08b711ebbd88ac1f6bf848b6,"Which film has the director died first, Showdown At Boot Hill or The Walls Of Hell?",Showdown At Boot Hill,6,4,False,True,40425
+364458b20baf11ebab90acde48001122,Who is Prince Hermann Friedrich Of Leiningen's paternal grandmother?,Grand Duchess Maria Kirillovna of Russia,3,3,True,True,38814
+83bf3b5a0bd911eba7f7acde48001122,When did Lothair Ii's mother die?,20 March 851,3,3,True,True,39827
+e8df7a2e095c11ebbdaeac1f6bf848b6,"Did the movies Laserblast and The Life Of Juanita Castro, originate from the same country?",yes,3,3,True,False,40197
+3d20c7000bb011ebab90acde48001122,"Who is Adelaide Of Burgundy, Duchess Of Brabant's paternal grandfather?","Odo III, Duke of Burgundy",3,2,False,False,41321
+4f95a4440bda11eba7f7acde48001122,What is the place of birth of the director of film The Wanted 18?,Kuwait,3,2,False,False,39237
+2d8f3ebe0bda11eba7f7acde48001122,Where was the director of film The Private Life Of Cinema born?,"Montreal, Quebec",3,3,True,True,39237
+9c34daf20bdc11eba7f7acde48001122,Where did Fedor Frešo's father die?,Piešťany,3,3,True,True,37021
+6bde832c0bdb11eba7f7acde48001122,Which award the director of film Sainikudu earned?,Filmfare Awards South,3,3,True,True,40500
+1d5abddf088811ebbd6eac1f6bf848b6,"Which film was released first, The First 7Th Night or Aansoo Ban Gaye Phool?",Aansoo Ban Gaye Phool,4,4,True,True,39484
+cb17bffe089611ebbd76ac1f6bf848b6,"Which film has the director who was born first, A Monster And A Half or Un Giorno Speciale?",A Monster And A Half,7,7,True,True,38559
+0083038e0bde11eba7f7acde48001122,Where did Prince Ferdinand Of Bavaria's mother die?,Munich,3,3,True,True,37703
+f2d62e4b09b511ebbdb0ac1f6bf848b6,"Are both mountains, Munti Wayi and Coñocranra, located in the same country?",yes,3,3,True,False,37417
+08b4d30e08d511ebbd98ac1f6bf848b6,"Which film has the director born first, Killer: Dead Or Alive or Adultery: A User'S Guide?",Adultery: A User'S Guide,6,4,False,True,39342
+2705d338093811ebbdaeac1f6bf848b6,"Do the movies Thor The Conqueror and City Of Pain, originate from the same country?",yes,3,2,False,False,42349
+63240f22089d11ebbd78ac1f6bf848b6,"Which film has the director who was born later, The First Day Of Freedom or Malabimba – The Malicious Whore?",Malabimba – The Malicious Whore,6,4,False,True,38673
+2080c9f00bde11eba7f7acde48001122,Where did the director of film The Eagle'S Eye study?,Amherst,3,3,True,True,43165
+6837abca0bb011ebab90acde48001122,"Who is Princess Adrienne, Duchess Of Blekinge's mother?","Princess Madeleine, Duchess of Hälsingland and Gästrikland",3,2,False,False,40146
+037da85d08c611ebbd90ac1f6bf848b6,Are Christopher Newton (Criminal) and Frances M. Vega of the same nationality?,yes,4,4,True,False,40041
+1cfbe61008d311ebbd96ac1f6bf848b6,"Which film has the director who was born first, O'Shaughnessy'S Boy or Sunday Light?",O'Shaughnessy'S Boy,6,4,False,True,41943
+84c99c760bb011ebab90acde48001122,"Who is the maternal grandmother of Louis, Dauphin Of France (Son Of Louis Xv)?",Catherine Opalińska,3,3,True,True,38580
+43d8b52c0baf11ebab90acde48001122,Who is Princess Mafalda Of Savoy's maternal grandmother?,Milena Vukotić,3,2,False,False,39942
+169c31500bb011ebab90acde48001122,Who is the paternal grandfather of Fakhr Al-Dawla?,Buya,3,3,True,True,36328
+66bac6160bdc11eba7f7acde48001122,Where was the director of film God'S Comedy born?,Figueira,3,3,True,True,41226
+1a5c63320bdd11eba7f7acde48001122,What is the place of birth of the director of film Guai Ai Vinti?,Rome,3,3,True,True,38324
+bbfe9c84087511ebbd67ac1f6bf848b6,"Which film has the director born first, Mutiny (1952 Film) or The Eagle'S Feather?",The Eagle'S Feather,6,4,False,True,40207
+e41f805c0bdb11eba7f7acde48001122,When did Bill Patterson (Racing Driver)'s father die?,13 June 1967,3,3,True,True,42089
+285016800bda11eba7f7acde48001122,Who is the spouse of the director of film The Unholy Wife?,Maureen O'Sullivan,3,2,False,False,38545
+67f75e6008ec11ebbda7ac1f6bf848b6,Was Louise Of Hesse-Kassel or Viktor Šiljeg born first?,Louise Of Hesse-Kassel,4,4,True,True,37839
+d6c5f2680bdd11eba7f7acde48001122,What nationality is Beatrice Of Savoy's mother?,France,3,3,True,True,40862
+ed80d5e108bd11ebbd8aac1f6bf848b6,"Which film was released first, Garçon Stupide or A Groom From The Other World?",A Groom From The Other World,4,4,True,True,39361
+29970e8e0baf11ebab90acde48001122,"Who is John, Count Of Brienne's paternal grandmother?",Elvira of Sicily,4,4,True,True,38688
+1f562d40086911ebbd5eac1f6bf848b6,"Which film came out earlier, I Love You Rosa or Pyar Ka Bandhan?",Pyar Ka Bandhan,4,4,True,True,37299
+cfa6279a085511ebbd59ac1f6bf848b6,"Which film has the director born later, Jingle All The Way or Pinocchio'S Revenge?",Pinocchio'S Revenge,6,5,False,True,41494
+bfec064d089311ebbd75ac1f6bf848b6,"Do both films Rip, Sew And Stitch and Clown Princes have the directors from the same country?",yes,5,5,True,False,38611
+1ca3370c0bdc11eba7f7acde48001122,What nationality is the performer of song Gone Fishin' (Song)?,America,3,3,True,True,39686
+95cf97b40bdd11eba7f7acde48001122,Where was the wife of Lev Karakhan born?,Petersburg,3,2,False,False,39994
+9248ce6c0bdd11eba7f7acde48001122,Where did the director of film White Rabbit (Film) graduate from?,State University of New York at Purchase,3,3,True,True,38670
+0e73737408ba11ebbd88ac1f6bf848b6,"Which film has the director born first, Time Out For Rhythm or Night Boat To Dublin?",Night Boat To Dublin,6,5,False,True,41302
+9ac2603a0bdd11eba7f7acde48001122,Which country Maria Carolina Zamoyska's mother is from?,Italian,3,3,True,True,38485
+0b0f34d6084a11ebbd55ac1f6bf848b6,"Which film whose director is younger, Keep 'Em Rolling or Balipeetam?",Balipeetam,6,5,False,True,38359
+fd848f860bdd11eba7f7acde48001122,What nationality is Margaretha Van Mechelen's husband?,Dutch Republic,3,2,False,False,40036
+0e161d6c084e11ebbd56ac1f6bf848b6,Do both films All Souls (Film) and Atomised (Film) have the directors from the same country?,yes,6,3,False,False,39562
+8f038cdb096011ebbdafac1f6bf848b6,"Which film came out earlier, Aram + Aram = Kinnaram or Thayagam?",Aram + Aram = Kinnaram,4,4,True,True,38963
+748446060bdb11eba7f7acde48001122,What nationality is the composer of song Make The World Move?,British,4,3,False,True,40806
+6138bd9c095411ebbdaeac1f6bf848b6,"Which one was established first, Shriro or Tj Ryan Foundation?",Shriro,4,4,True,True,42587
+dced4bf7089e11ebbd78ac1f6bf848b6,Are Ntnu University Museum and Anno Museum located in the same country?,yes,4,4,True,False,41631
+e862a5900bdb11eba7f7acde48001122,What is the place of birth of the performer of song That'S When Your Heartaches Begin?,"Tupelo, Mississippi",3,2,False,False,41279
+810be29808b211ebbd85ac1f6bf848b6,"Who lived longer, Guido Lauri or Joris Van Severen?",Guido Lauri,6,6,True,True,40820
+0bedb7e80bdc11eba7f7acde48001122,Why did John Middleton Murry's wife die?,tuberculosis,3,3,True,True,39058
+d1ca4c640bdd11eba7f7acde48001122,What is the place of birth of Konstantin Irmen-Tschet's wife?,Berlin,3,3,True,True,41696
+ddd7f12c086911ebbd5fac1f6bf848b6,Did Marian Hillar and John Henry Caldwell share the same nationality?,yes,4,4,True,False,41232
+8b5f752e0bdd11eba7f7acde48001122,Which award the director of film Edelweiss Pirates (Film) received?,Deutscher Filmpreis,3,3,True,True,43278
+196d76740bdc11eba7f7acde48001122,What is the date of death of Madhavrao Ii's father?,30 August 1773,4,4,True,True,38296
+7620e1b00bde11eba7f7acde48001122,What is the place of birth of Princess Albertina Frederica Of Baden-Durlach's father?,Ueckermünde,3,3,True,True,41032
+9fe6a6760baf11ebab90acde48001122,Who is Raghnall Mac Ruaidhrí's paternal grandfather?,Ailéan mac Ruaidhrí,3,3,True,True,37049
+f05423560bda11eba7f7acde48001122,Where did Saw Thanda's husband die?,Mrauk U,3,2,False,False,36004
+4ec76c9c089111ebbd73ac1f6bf848b6,Do director of film An Ideal Woman and director of film Goodbye Emmanuelle share the same nationality?,yes,5,5,True,False,41007
+28470e820bda11eba7f7acde48001122,Who is the father of the performer of song Quiero Estar Contigo?,Enrique Guzmán,3,3,True,True,41325
+6b8402c40bdd11eba7f7acde48001122,Who is the child of the director of film An Event?,Sergio Mimica-Gezzan,3,3,True,True,40120
+2b02ce0e08e711ebbda5ac1f6bf848b6,Are Izaute and Smagne located in the same country?,yes,3,3,True,False,43426
+ee5cf4a008a711ebbd7fac1f6bf848b6,"Which museum was established first, Museum Of Croatian Archaeological Monuments or Bayernhof Music Museum?",Museum Of Croatian Archaeological Monuments,4,4,True,True,42032
+4f362ec80bdb11eba7f7acde48001122,Where did the director of film The Alster Case die?,Baltimore,3,3,True,True,38196
+32c23401097711ebbdb0ac1f6bf848b6,"Which film was released earlier, Before I Disappear or Pravachakan?",Pravachakan,4,4,True,True,38136
+7b0abe460baf11ebab90acde48001122,Who is Eochu Uairches's paternal grandfather?,Énna Derg,3,3,True,True,38002
+68f864fe0bde11eba7f7acde48001122,Where was the place of death of the director of film The Picture Of Dorian Gray (1945 Film)?,New York,3,3,True,True,42131
+38ecffde0bdb11eba7f7acde48001122,Where was the place of death of the director of film A Hero Of The Big Snows?,Long Island,3,3,True,True,39376
+f92dceb2084b11ebbd56ac1f6bf848b6,"Who died first, Earl Valiquette or Jean-Joseph Gaume?",Jean-Joseph Gaume,4,4,True,True,38644
+0cbcfc680bde11eba7f7acde48001122,What nationality is the director of film Author! Author! (Film)?,Canadian,3,1,False,True,39413
+931a85420bdd11eba7f7acde48001122,Where was the father of Lord Patrick Crichton-Stuart born?,London,3,3,True,True,36555
+62ab4e000bb011ebab90acde48001122,Who is the husband of Princess Elene Of Georgia?,Prince Archil of Imereti,3,2,False,False,39243
+1ca95b8a084b11ebbd56ac1f6bf848b6,"Who was born earlier, Anthony Scott Burns or Oskar Drobne?",Oskar Drobne,4,4,True,True,38220
+94198d580bb011ebab90acde48001122,"Who is William Ii, Count Of Flanders's paternal grandmother?",Mathilde of Bourbon,3,3,True,True,39257
+8be3dafe08d511ebbd98ac1f6bf848b6,"Which film whose director was born first, Swamp Women or Tracy Rides?",Tracy Rides,6,4,False,True,39182
+9ddd446b089f11ebbd78ac1f6bf848b6,"Which film has the director who was born later, Il Diavolo In Convento or The Big Broadcast Of 1936?",The Big Broadcast Of 1936,6,5,False,True,40244
+86d1025008c611ebbd90ac1f6bf848b6,"Are both universities, African Institute For Future Studies and University Of Kisangani, located in the same country?",yes,4,4,True,False,40924
+c6243b900bdd11eba7f7acde48001122,Where was the director of film Life Classes born?,St. John's,3,3,True,True,40089
+bc48115a094e11ebbdaeac1f6bf848b6,"Which film was released more recently, Mystify: Michael Hutchence or The Man On The Roof?",Mystify: Michael Hutchence,4,4,True,True,39356
+0a66db380bb011ebab90acde48001122,"Who is William Ii, Prince Of Nassau-Dillenburg's paternal grandfather?","George Louis, Prince of Nassau-Dillenburg",3,3,True,True,40443
+9a7f003a0bdb11eba7f7acde48001122,Who is the father of the director of film Summer Skin (Film)?,Leopoldo Torres Ríos,3,2,False,False,38586
+6cbb0ed6089911ebbd77ac1f6bf848b6,"Which film has the director born later, Romance On The Run or The Palace Of Angels?",The Palace Of Angels,6,3,False,True,40258
+b6aec5ee0bd911eba7f7acde48001122,"What nationality is Sir Edward Acton, 3Rd Baronet's father?",English,4,4,True,True,38555
+064edb0908cd11ebbd93ac1f6bf848b6,"Which film was released more recently, Woman Without A Past or Il Seduttore?",Il Seduttore,4,4,True,True,38106
+d323fb0208c011ebbd8aac1f6bf848b6,"Which film whose director is younger, Tall Man Riding or Şalvar Davası?",Şalvar Davası,6,5,False,True,37167
+5cbf94880bb011ebab90acde48001122,Who is the mother of Infante Antonio Pascual Of Spain?,Maria Amalia of Saxony,3,3,True,True,43041
+480d6482089211ebbd73ac1f6bf848b6,"Which film has the director who was born later, Navy Nurse or The Face In The Fog?",Navy Nurse,6,4,False,True,39486
+e7e76caa085611ebbd59ac1f6bf848b6,"Which film whose director was born first, Poola Rangadu or Paganini Horror?",Poola Rangadu,6,5,False,True,39207
+d667e18f08d911ebbd9cac1f6bf848b6,"Which film has the director who was born earlier, The Marseille Contract or Strangers Of The Night?",Strangers Of The Night,6,4,False,True,39583
+8e07f1f00bda11eba7f7acde48001122,Who is the spouse of the director of film My Three Merry Widows?,Mapy Cortés,3,2,False,False,39670
+2cc66d74089011ebbd72ac1f6bf848b6,"Which film has the director born later, Life Hits or It'S In The Air?",Life Hits,6,4,False,True,39528
+1767e56608e011ebbda1ac1f6bf848b6,"Which film has the director who died later, Le Foto Proibite Di Una Signora Per Bene or Licenza Premio?",Le Foto Proibite Di Una Signora Per Bene,6,5,False,True,38008
+a42b97c80bdc11eba7f7acde48001122,What nationality is the director of film The Mission (1983 Film)?,Iran,3,3,True,True,44116
+3f48bc400bb011ebab90acde48001122,"Who is the paternal grandfather of Margaret Of Bavaria, Marchioness Of Mantua?","Ernest, Duke of Bavaria",3,3,True,True,39207
+4d3ab509099c11ebbdb0ac1f6bf848b6,Are Gare De La Roche-Sur-Yon and Gare De Namps-Quevauvillers both located in the same country?,yes,3,3,True,False,41724
+3aa6289708c511ebbd8eac1f6bf848b6,"Which film has the director who died later, Eyes Of Youth or The Vagabond Prince?",Eyes Of Youth,7,7,True,True,38516
+e437dddd089311ebbd75ac1f6bf848b6,"Which film has the director who died first, Robin Hood Of Monterey or Wedding With Erika?",Robin Hood Of Monterey,6,5,False,True,38237
+36b8644508af11ebbd83ac1f6bf848b6,"Which film has the director who is older than the other, The Lone Prairie or Buckaroo From Powder River? ",Buckaroo From Powder River,6,5,False,True,41113
+64075230086811ebbd5eac1f6bf848b6,"Which film whose director is younger, The Tiger Makes Out or La Vérité Sur Bébé Donge?",The Tiger Makes Out,6,4,False,True,38787
+31c340da0bde11eba7f7acde48001122,What is the date of death of Julia Livia's father?,14 September 23,3,3,True,True,40642
+858455fe087a11ebbd67ac1f6bf848b6,"Which film has the director who was born later, Caresses or Satiricosissimo?",Caresses,6,5,False,True,40442
+2f09d429089e11ebbd78ac1f6bf848b6,"Which film has the director who was born earlier, The Appeal To Conscience or Pretty Persuasion?",The Appeal To Conscience,6,4,False,True,40270
+1e640b0408d311ebbd96ac1f6bf848b6,Are Cherry Creek (Colorado) and Jucurucu River both located in the same country?,no,4,4,True,True,41069
+7efb04e708a011ebbd78ac1f6bf848b6,"Which film has the director who is older than the other, Goopy Gyne Bagha Byne or Halloween Kills? ",Goopy Gyne Bagha Byne,6,4,False,True,42165
+c6d93b11087411ebbd67ac1f6bf848b6,"Which film has the director who died earlier, How Dark The Nights Are On The Black Sea or La Carapate?",La Carapate,6,3,False,False,37852
+75668b40094111ebbdaeac1f6bf848b6,"Which film came out earlier, A Jester'S Tale or Ang Kwento Ni Mabuti?",A Jester'S Tale,4,4,True,True,38170
+adf633ba08b911ebbd88ac1f6bf848b6,"Who lived longer, Theodore Mcmillian or Hillel Slovak?",Theodore Mcmillian,6,5,False,True,39422
+5f5897fe0baf11ebab90acde48001122,"Who is Philippe, Duke Of Anjou's maternal grandfather?",Stanisław Leszczyński,3,2,False,False,37746
+78ba517c0bd911eba7f7acde48001122,What nationality is Arabia (Daughter Of Justin Ii)'s mother?,Byzantine Empire,3,3,True,True,40138
+48e6d06e086f11ebbd62ac1f6bf848b6,"Which film has the director died later, Lost In The Stratosphere or Blind Man'S Eyes?",Blind Man'S Eyes,7,5,False,True,40410
+43a0d7cd087d11ebbd6aac1f6bf848b6,"Who was born earlier, Jayme De Almeida or Elmina Shepard Taylor?",Elmina Shepard Taylor,4,4,True,True,37516
+11854514087511ebbd67ac1f6bf848b6,"Which film has the director born later, Je Fais Le Mort or Red Roses, Red Lips, Red Wine?",Je Fais Le Mort,7,5,False,True,37974
+cd45d99808f211ebbdaaac1f6bf848b6,"Which film was released more recently, Il Marchio Di Kriminal or Nandhi?",Nandhi,4,4,True,True,39004
+62a9cd640bb011ebab90acde48001122,"Who is the father-in-law of John Ernest, Duke Of Saxe-Eisenach?","William IV, Landgrave of Hesse-Kassel",3,2,False,False,39319
+1dba599508b811ebbd88ac1f6bf848b6,Are Ailes Gilmour and Chris Schwinden of the same nationality?,yes,3,3,True,False,38282
+24672c120bde11eba7f7acde48001122,Where was the husband of Virginia Foster Durr born?,Montgomery,3,2,False,False,36893
+1c0dd3b00bdc11eba7f7acde48001122,Which country Aleksander Koniecpolski (1620–1659)'s father is from?,Polish-Lithuanian Commonwealth,3,3,True,True,37198
+3cfe44540bde11eba7f7acde48001122,What is the place of birth of Bea Ballard's father?,Shanghai,3,3,True,True,39803
+2e4804e8086611ebbd5eac1f6bf848b6,"Which film has the director born later, Colour Blossoms or Kai Rabe Gegen Die Vatikankiller?",Kai Rabe Gegen Die Vatikankiller,6,6,True,True,37326
+1fa46e26084911ebbd55ac1f6bf848b6,Do both films The Umbrella Coup and The Cow And I have the directors that share the same nationality?,yes,5,5,True,False,40100
+4a3e57f708c511ebbd8eac1f6bf848b6,"Who was born first, Jeanne Mandello or Alexander Herrmann?",Alexander Herrmann,4,4,True,True,36734
+e1a69e46088911ebbd6eac1f6bf848b6,"Which film has the director died later, Too Tough To Kill or Jhoothi?",Jhoothi,6,5,False,True,39149
+2ea72c0c084d11ebbd56ac1f6bf848b6,"Which film has the director born later, House Of Blackmail or Taxi Zum Klo?",Taxi Zum Klo,6,6,True,True,39308
+f4c82ea208a411ebbd7dac1f6bf848b6,Do both films: Racing Extinction and Madame Butterfly (1995 Film) have the directors from the same country?,no,6,6,True,True,38314
+fec1cc4a087911ebbd67ac1f6bf848b6,"Which film has the director who was born later, Así En El Cielo Como En La Tierra or Buck And The Preacher?",Así En El Cielo Como En La Tierra,6,5,False,True,38475
+3bd4278d08fb11ebbdacac1f6bf848b6,"Which magazine was founded first, Racing Toward Diversity or Lo Scolaro?",Lo Scolaro,4,4,True,True,40208
+e42d315308f711ebbdaaac1f6bf848b6,"Which film was released earlier, Dreamville Presents: Revenge or One More Time With Feeling?",One More Time With Feeling,4,4,True,True,41303
+49774ef8085511ebbd59ac1f6bf848b6,"Which film was released first, Raadha Aur Seeta or The Fate Of The Furious?",Raadha Aur Seeta,4,4,True,True,39182
+2dc690ba0bdc11eba7f7acde48001122,What is the place of birth of the performer of song Changed It?,Port of Spain,3,3,True,True,40522
+612322280bde11eba7f7acde48001122,Where did the director of film The Power (1984 Film) graduate from?,"University of California, Los Angeles",3,2,False,False,37521
+2ec36c440bb011ebab90acde48001122,"Who is the paternal grandfather of Richard Beauchamp, 1St Earl Of Worcester?",Thomas de Beauchamp,3,3,True,True,40074
+e3280f82092b11ebbdaeac1f6bf848b6,"Which film was released earlier, Swept From The Sea or Aa Naluguru?",Swept From The Sea,4,4,True,True,37066
+f5aba0260bdb11eba7f7acde48001122,"Where did William Louis, Prince Of Anhalt-Harzgerode's father die?",Plötzkau,3,3,True,True,42225
+a8f8be800bdb11eba7f7acde48001122,What is the place of birth of Charles Eugène Gabriel De Sombreuil's father?,Ensisheim,3,3,True,True,37411
+67326a9408c711ebbd91ac1f6bf848b6,Does Eddie Murray (Rugby League) have the same nationality as Henry Talbot (Photographer)?,yes,3,3,True,True,43158
+104c34700bde11eba7f7acde48001122,What nationality is the director of film To Walk With Lions?,Australia,3,3,True,True,38835
+60402bf80bde11eba7f7acde48001122,When did Conall Mac Comgaill's father die?,538,3,3,True,True,38124
+f5712c9c08a811ebbd7fac1f6bf848b6,"Which film has the director born later, Four For Venice or Gypped In The Penthouse?",Four For Venice,6,4,False,True,41407
+010d6cab08c711ebbd91ac1f6bf848b6,"Which film has the director who was born earlier, A Romance Of The Air or How Moscha Came Back?",How Moscha Came Back,6,5,False,True,40179
+ec8167b208a011ebbd78ac1f6bf848b6,"Which film has the director born first, La Mazurka Del Barone, Della Santa E Del Fico Fiorone or Safe (2012 Film)?","La Mazurka Del Barone, Della Santa E Del Fico Fiorone",6,5,False,True,40515
+adf546880bdb11eba7f7acde48001122,When did Lord George Scott's father die?,5 November 1914,3,3,True,True,41585
+812068dd087e11ebbd6bac1f6bf848b6,"Which film has the director who died first, The People Vs. Larry Flynt or Manila In The Claws Of Light?",Manila In The Claws Of Light,6,5,False,True,40560
+2536562e0baf11ebab90acde48001122,Who is the mother-in-law of Louise Of Mecklenburg-Güstrow?,Charlotte Amalie of Hesse-Kassel,3,2,False,False,42028
+534cb7600bdc11eba7f7acde48001122,Where did the director of film Evil Alien Conquerors graduate from?,"University of California, Los Angeles",3,3,True,True,40289
+53f3501408d711ebbd9aac1f6bf848b6,"Which film has the producer died later, A Midnight Romance or The Bedford Incident?",The Bedford Incident,6,4,False,True,40370
+ec70a8a208a311ebbd7cac1f6bf848b6,"Who died earlier, Werner Mensching or Karel Zich?",Werner Mensching,4,4,True,True,37909
+f4427a300bda11eba7f7acde48001122,Who is the mother of the director of film Citizen Usa: A 50 State Road Trip?,Nancy Pelosi,3,3,True,True,43098
+aa7520b80baf11ebab90acde48001122,Who is the father-in-law of Margaretha Van Mechelen?,William the Silent,3,2,False,False,39123
+10b8567808c311ebbd8dac1f6bf848b6,Are both George Mattos and Douglas E. Winter from the same country?,yes,3,3,True,False,39540
+a246875408d211ebbd96ac1f6bf848b6,"Which film has the director born first, Shah Jahan Regency or Fatma Bacı?",Fatma Bacı,6,5,False,True,39013
+3ced5368089311ebbd74ac1f6bf848b6,"Which film has the director died earlier, Johnny-On-The-Spot or Bedtime With Rosie?",Johnny-On-The-Spot,6,5,False,True,37977
+30170c900bb011ebab90acde48001122,Who is the paternal grandfather of George Tupou V?,Viliami Tungī Mailefihi,3,3,True,True,36776
+913ceb43088211ebbd6dac1f6bf848b6,"Which film has the director who was born first, Piccoli Fuochi or The Nice Guys?",Piccoli Fuochi,6,4,False,True,38920
+6a6bc12208a611ebbd7fac1f6bf848b6,"Which film has the director died later, Pacific Rendezvous or Calling Bulldog Drummond?",Pacific Rendezvous,6,5,False,True,41223
+076288460bde11eba7f7acde48001122,What is the date of birth of Henry I Of Ziębice's father?,1322,3,3,True,True,41753
+92ae94d309bb11ebbdb0ac1f6bf848b6,"Are both mountains, Allqamari and Juch'Uy Llallawa, located in the same country?",yes,3,3,True,False,36809
+5cb4d8ae0bb011ebab90acde48001122,"Who is the paternal grandfather of Bernhard Iv, Prince Of Anhalt-Bernburg?","Bernhard II, Prince of Anhalt-Bernburg",3,3,True,True,40898
+13fc53700bde11eba7f7acde48001122,What is the place of birth of the director of film The Great Dome Robbery?,British,3,3,True,True,42471
+14576a100bdb11eba7f7acde48001122,Where was the husband of Serena Evans born?,"Evesham, Worcestershire",3,2,False,False,38826
+b4b59c3d085e11ebbd5cac1f6bf848b6,"Who was born first out of Amable Éno, Dit Deschamps and Wayne Sykes?","Amable Éno, Dit Deschamps",4,4,True,True,37976
+923058320bdd11eba7f7acde48001122,Where did Salin Mibaya's father die?,Pyay,3,3,True,True,37236
+bd9609880bdb11eba7f7acde48001122,Who is the father of the director of film Battle In Seattle?,Peter Townsend,3,2,False,False,41413
+c97a9d3c08c411ebbd8eac1f6bf848b6,"Which university was established first, Universidad Autónoma De La Laguna or Penang Free School?",Penang Free School,4,4,True,True,41251
+7032bda20baf11ebab90acde48001122,"Who is Louis Armand I, Prince Of Conti's father?","Armand de Bourbon, Prince of Conti",3,3,True,True,38792
+0735d65e08b711ebbd88ac1f6bf848b6,"Which film has the director died later, Modern Husbands or The Fighting Vigilantes?",Modern Husbands,7,6,False,True,39918
+b358b348084e11ebbd56ac1f6bf848b6,Are Frederick Elliott Brown and John Yule both from the same country?,yes,4,4,True,False,38935
+02b62fce087211ebbd64ac1f6bf848b6,"Which film whose director is younger, Phalitamsha or Gladiators Seven?",Phalitamsha,6,5,False,True,39506
+402c6e0008c611ebbd90ac1f6bf848b6,Was Sammy Hagar or Renaud Garcia-Fons born first?,Sammy Hagar,4,4,True,True,38178
+90ecd947085e11ebbd5cac1f6bf848b6,"Which film has the director born later, I Sette Dell'Orsa Maggiore or Length Of War?",Length Of War,6,5,False,True,37932
+868df7cd08a011ebbd78ac1f6bf848b6,"Who was born later, Lakutis or Jeff Fabry?",Lakutis,4,4,True,True,38964
+277abef40bda11eba7f7acde48001122,What is the date of death of Vlatko Vuković's father?,1359,3,3,True,True,35870
+b7de2a860bd911eba7f7acde48001122,Who is the spouse of the director of film West Of Shanghai?,Maureen O'Sullivan,3,2,False,False,41500
+3c10b1ba0bdb11eba7f7acde48001122,What is the place of birth of Prince Nayef Bin Abdullah's father?,Mecca,4,4,True,True,37743
+0518615a0bde11eba7f7acde48001122,What is the date of death of Papianilla (Wife Of Sidonius Apollinaris)'s husband?,489,3,3,True,True,38338
+f1e802100bd911eba7f7acde48001122,Where did the composer of film Oru Swakaryam die?,Lakshadweep,3,3,True,True,39541
+2b9528860bde11eba7f7acde48001122,Where was the father of Marianus V Of Arborea born?,Sardinia,3,3,True,True,40433
+eb3d62d608ad11ebbd83ac1f6bf848b6,"Do both films, The Wild Frontier (Film) and The Sundowners (1960 Film), have the directors who are from the same country?",yes,7,6,False,False,40988
+c624d5280bdd11eba7f7acde48001122,What is the place of birth of Gwladys's husband?,Gwynllwg,3,3,True,True,36671
+03f08a740bb011ebab90acde48001122,Who is Prince Mired Bin Ra'Ad's paternal grandmother?,Princess Fahrelnissa Zeid,3,3,True,True,40422
+755fdd7c08a411ebbd7cac1f6bf848b6,"Which film whose director was born first, Broadway Or Bust or Ballad Of Tara?",Broadway Or Bust,7,5,False,True,39647
+f2abc5580bdc11eba7f7acde48001122,What is the place of birth of the composer of film Amarajeevi (1965 Film)?,Karnataka,3,3,True,True,37556
+42d8ba2108ec11ebbda7ac1f6bf848b6,"Who is older, Madeleine Robinson or Dušan Poliačik?",Madeleine Robinson,4,4,True,True,38734
+b3d425c20bdd11eba7f7acde48001122,"Where was the place of burial of George Tuchet, 1St Earl Of Castlehaven's father?",Betley,3,3,True,True,37694
+7d7237ac08a011ebbd78ac1f6bf848b6,"Which film has the director who was born earlier, The Marriage Of Princess Demidoff or The Pocket-Knife?",The Marriage Of Princess Demidoff,6,4,False,True,38658
+33f51d7e0bde11eba7f7acde48001122,What nationality is the director of film Blood Street?,Chinese,3,3,True,True,38445
+38be3008086a11ebbd5fac1f6bf848b6,"Which film was released more recently, Hotel Reserve or Return To The Hiding Place?",Return To The Hiding Place,4,4,True,True,41798
+cc98efde0bdd11eba7f7acde48001122,Where was the mother of Berengaria Of Portugal born?,Barcelona,3,3,True,True,42568
+ab28bfb6097d11ebbdb0ac1f6bf848b6,"Which film came out first, Mama'S Little Pirate or Beauties On Motor Scooters?",Mama'S Little Pirate,4,4,True,True,39320
+90c8793c087411ebbd67ac1f6bf848b6,"Which film has the director who is older than the other, Airheads or Return To Cabin By The Lake? ",Return To Cabin By The Lake,6,4,False,True,39508
+0c3dba160bde11eba7f7acde48001122,Where does Sharon Tiller's husband work at?,UC Berkeley,3,3,True,True,38597
+8bc6a73a0bb011ebab90acde48001122,Who is the maternal grandmother of Sancho Ramírez?,"Garsenda, Heiress of Bigorre",3,2,False,False,37993
+6355d0d1095011ebbdaeac1f6bf848b6,Are Chemours and Hadag located in the same country?,no,4,4,True,True,43082
+87e4e1e0088b11ebbd6fac1f6bf848b6,Are Antoine Jean-Baptiste Thomas and Canardo (Rapper) of the same nationality?,yes,3,3,True,True,38522
+8820c510086411ebbd5eac1f6bf848b6,"Which film has the director died first, Raiders Of Red Gap or A Day Of Fury?",Raiders Of Red Gap,6,4,False,True,40909
+ba015944086611ebbd5eac1f6bf848b6,Do both films: A Slave Of Vanity and Grace Of My Heart have the directors from the same country?,yes,5,5,True,True,41522
+54014a680baf11ebab90acde48001122,Who is Felicia Of Roucy's mother-in-law?,Ermesinda of Bigorre,3,3,True,True,38518
+85b6ab18087e11ebbd6bac1f6bf848b6,"Which film has the director who was born first, Folly To Be Wise or The Jerk?",Folly To Be Wise,6,5,False,True,39678
+8308df9e08a311ebbd7bac1f6bf848b6,"Who died earlier, Emanuel Sayles or Božena Němcová?",Božena Němcová,4,4,True,True,38448
+4139616c08d311ebbd96ac1f6bf848b6,"Who is younger, Lorenzo Zazzeri or Eliška Krásnohorská?",Lorenzo Zazzeri,4,4,True,True,36642
+fbf8fd9e0bda11eba7f7acde48001122,Where did the performer of song Karma (Alicia Keys Song) study?,Columbia,3,3,True,True,42362
+593584760bb011ebab90acde48001122,"Who is the paternal grandfather of Prince Charles Louis, Duke Of Chartres?","Henri, Count of Paris",3,3,True,True,39728
+4397f3460bde11eba7f7acde48001122,What is the place of birth of the performer of song Somebody Slap Me?,Apopka,3,2,False,False,42414
+a5937fe00baf11ebab90acde48001122,Who is the maternal grandfather of Archduchess Maria Theresa Of Austria (1862–1933)?,Ferdinand II of the Two Sicilies,3,3,True,True,42753
+f26542c808c511ebbd8fac1f6bf848b6,"Which film has the director died later, Rosaura At 10 O'Clock or Uncle'S New Blazer?",Rosaura At 10 O'Clock,6,5,False,True,39979
+551e024408a611ebbd7fac1f6bf848b6,Do both films Interview With A Hitman and The Last Coupon have the directors from the same country?,yes,5,5,True,False,39727
+bca5eaaf089b11ebbd78ac1f6bf848b6,"Who is younger, Carlos Reyté or Dominic Jacotin Gamble?",Carlos Reyté,4,4,True,True,37297
+08f5c0bc0bdc11eba7f7acde48001122,Where was the director of film Flags And Waves born?,Toronto,4,2,False,False,39294
+0d9251260baf11ebab90acde48001122,Who is the sibling-in-law of Jean Tangye?,Nigel Tangye,3,3,True,True,37053
+e9e18ee608d811ebbd9cac1f6bf848b6,"Which film was released first, Kalaya Tasmai Namaha or Undercover With The Kkk?",Undercover With The Kkk,4,4,True,True,37089
+5674280a0bdd11eba7f7acde48001122,Where was the wife of Gerry Neugebauer born?,New York,3,3,True,True,38717
+49ccfdfa08ce11ebbd94ac1f6bf848b6,"Which film has the director who is older, Amira & Sam or Fat Man And Little Boy?",Fat Man And Little Boy,6,4,False,True,38168
+d73fa07c0bdd11eba7f7acde48001122,"What is the date of death of Alfonso Pérez De Guzmán, 5Th Duke Of Medina Sidonia's father?",1507,3,3,True,True,41156
+1900f7600baf11ebab90acde48001122,"Who is Thomas Stafford, 3Rd Earl Of Stafford's father?","Hugh de Stafford, 2nd Earl of Stafford",3,3,True,True,38346
+042a249a0bde11eba7f7acde48001122,Where was the director of film Eight Days A Week (Film) born?,Rockville,3,3,True,True,43592
+8b9607820bd911eba7f7acde48001122,Who is the father of the director of film Tiger Cage (Film)?,Yuen Siu-tien,3,3,True,True,40640
+f52452fc0bda11eba7f7acde48001122,Where was the place of death of Thaddeus P. Mott's father?,New York,3,3,True,True,38906
+90c0b632086c11ebbd61ac1f6bf848b6,"Which film whose director is younger, Traces Of A Dragon or Moonnupookkal?",Traces Of A Dragon,6,4,False,True,37541
+0984e6aa0bde11eba7f7acde48001122,What is the place of birth of the director of film Man At The Carlton Tower?,Wiltshire,3,2,False,False,40996
+eeb017fa0bdd11eba7f7acde48001122,Where was the place of death of James Adam (Architect)'s father?,Edinburgh,3,3,True,True,41064
+5760bd8208b311ebbd86ac1f6bf848b6,"Which film has the director born first, S Durga or Sweet Emma, Dear Böbe?","Sweet Emma, Dear Böbe",6,5,False,True,40627
+23d98c100bdc11eba7f7acde48001122,"When was George Howard, 11Th Earl Of Carlisle's father born?",8 March 1867,3,3,True,True,39722
+5db7d3f00bdd11eba7f7acde48001122,Where was the director of film The Poll Diaries born?,Göttingen,3,2,False,False,39217
+642b190c0bda11eba7f7acde48001122,Who is the spouse of the director of film The Invisible Menace?,Maureen O'Sullivan,3,2,False,False,40156
+cda459160bda11eba7f7acde48001122,Who is the father of the director of film Palo Alto (2013 Film)?,Gian-Carlo Coppola,3,3,True,True,41917
+996b6cd60bdd11eba7f7acde48001122,What nationality of the company that published Safeguard (Magazine)?,Canadian,3,3,True,True,44413
+cc3587140bdd11eba7f7acde48001122,What nationality is Humehume's father?,Kingdom of Hawaiʻi,3,2,False,False,40615
+3733d61a0bde11eba7f7acde48001122,What nationality is the director of film 3096 Days?,American,3,3,True,True,38315
+b64f541e088d11ebbd70ac1f6bf848b6,"Which film has the director who was born later, Illusions (1982 Film) or It'S A Wonderful Afterlife?",It'S A Wonderful Afterlife,6,4,False,True,40408
+d2b2c30008a811ebbd7fac1f6bf848b6,"Which film has the director who was born later, Sylvie Et Le Fantôme or Sky Patrol?",Sylvie Et Le Fantôme,6,5,False,True,37715
+65fa28440bdb11eba7f7acde48001122,What nationality is the composer of song Chiquilla (Julio Iglesias Song)?,Spanish,3,3,True,True,40369
+15d1892108ef11ebbda8ac1f6bf848b6,"Who was born later, Vincenzo Lapuma or Sy Kattelson?",Sy Kattelson,4,4,True,True,37830
+81ca57e60bdc11eba7f7acde48001122,Where was the director of film Age-Old Friends born?,"Winnipeg, Manitoba",3,2,False,False,38886
+a9a7d5580bdd11eba7f7acde48001122,Where was the place of death of Cyril Holland's father?,Paris,3,3,True,True,38822
+3685f31a0bde11eba7f7acde48001122,Where did Mate Meštrović's father graduate from?,Academy of Fine Arts Vienna,3,3,True,True,41180
+19e6c50608d711ebbd99ac1f6bf848b6,"Which film whose director is younger, College Lovers or The Dixie Flyer?",College Lovers,6,5,False,True,42490
+bb72bde108a711ebbd7fac1f6bf848b6,"Who was born earlier, Monica Roșu or Bruno Bizarro?",Bruno Bizarro,4,4,True,True,37864
+8879d5b60bb011ebab90acde48001122,Who is the father-in-law of Prince Feodor Alexandrovich Of Russia?,Grand Duke Paul Alexandrovich of Russia,3,3,True,True,39585
+cdab733e086711ebbd5eac1f6bf848b6,"Do both films, Stagecoach Express (Film) and Cape Fear (1962 Film), have the directors who are from the same country?",no,6,6,True,True,40262
+29bf69d20bb011ebab90acde48001122,Who is the stepmother of Sara Ali Khan?,Kareena Kapoor,3,3,True,True,39754
+b672c1ee0bdd11eba7f7acde48001122,What is the place of birth of the composer of film Inherent Vice (Film)?,Oxford,3,3,True,True,39506
+5bbe52ec08e311ebbda4ac1f6bf848b6,"Which film was released earlier, Striporama or The World And His Wife?",The World And His Wife,4,4,True,True,40868
+2ccc68a108fe11ebbdadac1f6bf848b6,"Which magazine came out first, Entertain Magazine or Woman'S Century?",Woman'S Century,4,4,True,True,39891
+d9f5fd9a0bdb11eba7f7acde48001122,What is the place of birth of the director of film Being Human (2005 Film)?,"Montreal, Quebec",3,3,True,True,38778
+8dcaaf24089811ebbd77ac1f6bf848b6,"Which film has the director died first, I Like Only You or Brother Rat?",I Like Only You,6,5,False,True,38458
+c9a769c608be11ebbd8aac1f6bf848b6,"Who was born first, Hywel Teifi Edwards or Felix Schuster?",Felix Schuster,4,3,False,True,36688
+8cd1b0020bdd11eba7f7acde48001122,What is the place of birth of Atang De La Rama's husband?,Hagonoy,3,2,False,False,40798
+597a839c0bdc11eba7f7acde48001122,"Where was the place of death of Elizabeth Fitzalan, Duchess Of Norfolk's husband?",Venice,4,4,True,True,38660
+48d7196a08df11ebbda0ac1f6bf848b6,"Which film has the director who was born first, Everybody'S Hobby or Ghosts Of Abu Ghraib?",Everybody'S Hobby,6,2,False,False,39997
+096e42ba0bde11eba7f7acde48001122,Where does Gwen Graham's father work at?,Harvard,3,3,True,True,41013
+5a733ed40bdb11eba7f7acde48001122,Who founded the company that published Moulin Rouge (Magazine)?,Sergey S. Rodionov,3,3,True,True,42567
+2e419977088111ebbd6dac1f6bf848b6,"Which film has the director died first, To Mary – With Love or Five Little Peppers And How They Grew?",To Mary – With Love,8,6,False,True,38987
+8cd3fe6c0baf11ebab90acde48001122,Who is Colgú Mac Faílbe Flaind's uncle?,Fíngen mac Áedo Duib,3,3,True,True,37554
+6c7f03240bdb11eba7f7acde48001122,Where was the husband of Jeanne Raunay born?,Évreux,3,2,False,False,40794
+a66836a00bdb11eba7f7acde48001122,Who is the father of the director of film Someone I Loved?,Jean-Claude Deret,4,3,False,False,38074
+bd036cfc088811ebbd6eac1f6bf848b6,Are The Romance Of Max and Venus (1929 Film) from the same country?,yes,3,3,True,False,39712
+0b86c27208c611ebbd90ac1f6bf848b6,"Which film came out earlier, This Night Is Still Ours or Huma Gun Anmogaldi?",Huma Gun Anmogaldi,4,4,True,True,36861
+d3cbda480bdb11eba7f7acde48001122,Where was the director of film Kadathanaattu Maakkam born?,Pulinkunnoo,3,3,True,True,37574
+498dc8a2089111ebbd72ac1f6bf848b6,"Which film has the director died later, Dahleez or The Lights Of Buenos Aires?",Dahleez,7,6,False,True,38615
+578144840bde11eba7f7acde48001122,Where did the director of film Shock Treatment (1964 Film) study?,UCLA,3,2,False,False,39204
+cce18dc7086211ebbd5dac1f6bf848b6,Are director of film Count Five And Die and director of film The Green Jacket both from the same country?,yes,5,5,True,False,40493
+350ec8b80bde11eba7f7acde48001122,Where was the composer of song By The Beautiful Sea (Song) born?,"Atlantic City, New Jersey",3,3,True,True,38152
+711449320bde11eba7f7acde48001122,What is the place of birth of the editor of magazine Scrutiny (Journal)?,Cambridge,3,3,True,True,41293
+c1bc7e500bdd11eba7f7acde48001122,Where was the wife of Lou Breslow born?,"Dayton, Ohio",3,2,False,False,39636
+53ab316c08b911ebbd88ac1f6bf848b6,"Which film has the director who died later, The Fatal Mistake or The Devil'S Hairpin?",The Devil'S Hairpin,6,4,False,True,42783
+567300700bdc11eba7f7acde48001122,Who is the spouse of the composer of song Know Bout Me?,Beyoncé,4,2,False,False,39768
+f4c977620bdd11eba7f7acde48001122,Where was the composer of song The Trail Of The Lonesome Pine (Song) born?,"Atlantic City, New Jersey",3,3,True,True,43811
+9bc54aba0bdd11eba7f7acde48001122,What is the place of birth of the performer of song Merry-Go-Round (Ayumi Hamasaki Song)?,Fukuoka,3,3,True,True,39079
+b017cdec0bda11eba7f7acde48001122,What is the place of birth of the director of film Raise Your Voice?,"Burbank, California",3,2,False,False,39041
+434dea7708d211ebbd95ac1f6bf848b6,"Who lived longer, Ludwig Elsbett or Pamela Ann Rymer?",Ludwig Elsbett,6,6,True,True,37626
+6add3d560bdb11eba7f7acde48001122,What nationality is the director of film Paradox (2016 Film)?,New Zealand,3,2,False,False,38846
+f7ddb2ce0bdd11eba7f7acde48001122,Where was the wife of Pierre-Marie Gault De Saint-Germain born?,Warsaw,3,3,True,True,40141
+cce5bb160bdd11eba7f7acde48001122,Why did the composer of song Waspman die?,overdose,3,3,True,True,39655
+7e6280500bdd11eba7f7acde48001122,What is the place of birth of the director of film Tammy And The T-Rex?,British,3,3,True,True,40765
+3cc3895c08cf11ebbd94ac1f6bf848b6,"Which film has the director who died first, The Love Trader or Clancy Of The Mounted?",Clancy Of The Mounted,7,4,False,True,40118
+e73a5394089211ebbd74ac1f6bf848b6,"Which film has the director who died first, Vice Raid or The Courier Of Lyon?",Vice Raid,6,5,False,True,37980
+cd4ceac40bd911eba7f7acde48001122,Where was the place of death of the composer of song Love Is Here To Stay?,Hollywood,3,3,True,True,39779
+f364ff4c0bae11ebab90acde48001122,Who is Anne Woodville's father-in-law?,"Edmund Grey, 1st Earl of Kent",3,2,False,False,41371
+62aa2da40bb011ebab90acde48001122,Who is the maternal grandmother of Prince Dmitri Alexandrovich Of Russia?,Maria Feodorovna,3,3,True,True,40313
+ccd086f80bdb11eba7f7acde48001122,Where was the director of film Do You Believe? (Film) born?,American,3,3,True,True,38011
+bd46e5d20baf11ebab90acde48001122,Who is the maternal grandfather of Amaury De Montfort (Died 1241)?,Bouchard V de Montmorency,3,3,True,True,36518
+006d81bc0bde11eba7f7acde48001122,What nationality is the performer of song When The Stars Go Blue?,America,3,3,True,True,39011
+78107ec8097611ebbdb0ac1f6bf848b6,"Are both villages, Rhosgoch and Qaleh-Ye Sahar, located in the same country?",no,4,3,False,True,38115
+a431a93808d511ebbd98ac1f6bf848b6,"Which film has the director born earlier, The Korean Wedding Chest or True To The Navy?",True To The Navy,6,5,False,True,37962
+05b1ac800bdd11eba7f7acde48001122,Where was the director of film Broadway Gold born?,New York,3,3,True,True,42755
+3143ca94096011ebbdafac1f6bf848b6,"Which film was released earlier, Hirer Angti or Torn From The Flag?",Hirer Angti,4,4,True,True,38788
+fb52e1ec0bdb11eba7f7acde48001122,What is the place of birth of the performer of song Take A Picture (Carly Rae Jepsen Song)?,Mission,3,3,True,True,39993

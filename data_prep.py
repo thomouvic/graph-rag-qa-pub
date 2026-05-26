@@ -1,7 +1,7 @@
 """
 Data preparation utilities for KET-RAG experiments.
 
-Loads benchmark data (from HippoRAG datasets), selects experiment splits,
+Loads HippoRAG benchmark data, selects experiment splits,
 converts to KET-RAG format, and writes to disk.
 """
 
@@ -12,7 +12,7 @@ from pathlib import Path
 
 def load_hipporag_dataset(dataset_dir: Path, dataset_name: str):
     """
-    Load corpus and queries from datasets/ directory.
+    Load corpus and queries from HippoRAG reproduce/dataset/.
     Returns (corpus, queries) in HippoRAG's native format.
     """
     corpus_path = dataset_dir / f"{dataset_name}_corpus.json"

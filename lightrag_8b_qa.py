@@ -48,12 +48,12 @@ from lightrag_musique import parse_lightrag_context, compress_lightrag_context
 DATASETS = {
     "hotpotqa": {
         "qa_path": BASE / "experiments" / "hotpotqa" / "large_scale" / "qa-pairs" / "qa-pairs.json",
-        "context_cache": BASE / "experiments" / "hotpotqa" / "large_scale_lightrag" / "lightrag_contexts.json",
+        "context_cache": Path(r"C:\temp\hotpotqa_lightrag\lightrag_contexts.json"),
         "results_dir": BASE / "experiments" / "hotpotqa" / "large_scale_lightrag" / "results",
     },
     "musique": {
         "qa_path": BASE / "experiments" / "musique" / "large_scale" / "qa-pairs" / "qa-pairs.json",
-        "context_cache": BASE / "experiments" / "musique" / "large_scale_lightrag" / "lightrag_contexts.json",
+        "context_cache": Path(r"C:\temp\musique_lightrag\lightrag_contexts.json"),
         "results_dir": BASE / "experiments" / "musique" / "large_scale_lightrag" / "results",
     },
     "2wikimultihopqa": {

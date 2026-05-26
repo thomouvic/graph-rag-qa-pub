@@ -10,7 +10,7 @@ for split, n in [('medium_200', 200), ('large_scale', 500)]:
             if files:
                 dfs[(n,mt,method)] = pd.read_csv(files[0])
 
-hippo = json.loads(open('datasets/hotpotqa.json', encoding='utf-8').read())
+hippo = json.loads(open('HippoRAG/reproduce/dataset/hotpotqa.json', encoding='utf-8').read())
 type_map = {str(q.get('_id',q.get('id',''))): q.get('type','unknown') for q in hippo}
 
 def get_ids(n, qtype):

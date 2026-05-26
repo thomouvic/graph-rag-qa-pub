@@ -36,7 +36,8 @@ def build_paths(work_dir, dataset, split):
     return {
         "work_dir":     work_dir,
         "ketrag_dir":   work_dir / "KET-RAG",
-        "hippo_data":   work_dir / "datasets",
+        "hippo_dir":    work_dir / "HippoRAG",
+        "hippo_data":   work_dir / "HippoRAG" / "reproduce" / "dataset",
         "project_root": work_dir / "experiments" / dataset / split,
         "summaries":    work_dir / "summaries",
     }

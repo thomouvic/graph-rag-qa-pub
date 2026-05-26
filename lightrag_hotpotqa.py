@@ -44,7 +44,7 @@ from lightrag.utils import EmbeddingFunc
 BASE = Path(__file__).resolve().parent
 INPUT_DIR = BASE / "experiments" / "hotpotqa" / "large_scale" / "input"
 QA_PATH = BASE / "experiments" / "hotpotqa" / "large_scale" / "qa-pairs" / "qa-pairs.json"
-WORK_DIR = BASE / "experiments" / "hotpotqa" / "large_scale_lightrag"
+WORK_DIR = Path(r"C:\temp\hotpotqa_lightrag")
 RESULTS_DIR = BASE / "experiments" / "hotpotqa" / "large_scale_lightrag" / "results"
 CONTEXT_CACHE = WORK_DIR / "lightrag_contexts.json"
 

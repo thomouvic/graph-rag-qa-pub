@@ -22,6 +22,201 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 
+# ── Self-Ask prompts (Press et al. 2022, Tables 10 and 13, verbatim) ─
+# Reproduced exactly from "Measuring and Narrowing the Compositionality
+# Gap in Language Models" (arXiv:2210.03350). Per Section 3.5, the
+# 2WikiMultiHopQA prompt uses the 4 examples from Ho et al. 2020 Table 3
+# in the same order to demonstrate no prompt tuning. Per Section 3.2, the
+# 2WikiMultiHopQA prompt is reused for Bamboogle for the same reason; we
+# reuse it for HotpotQA on the same precedent. The MuSiQue prompt has 6
+# examples per Table 10. All scaffolds ("Are follow up questions needed
+# here:", "Follow up:", "Intermediate answer:", "So the final answer is:")
+# are kept verbatim.
+
+SELF_ASK_2WIKI_HOTPOT = """Question: Who lived longer, Theodor Haecker or Harry Vaughan Watkins?
+Are follow up questions needed here: Yes.
+Follow up: How old was Theodor Haecker when he died?
+Intermediate answer: Theodor Haecker was 65 years old when he died.
+Follow up: How old was Harry Vaughan Watkins when he died?
+Intermediate answer: Harry Vaughan Watkins was 69 years old when he died.
+So the final answer is: Harry Vaughan Watkins.
+
+Question: Why did the founder of Versus die?
+Are follow up questions needed here: Yes.
+Follow up: Who founded Versus?
+Intermediate answer: Gianni Versace.
+Follow up: Why did Gianni Versace die?
+Intermediate answer: Gianni Versace was shot and killed on the steps of his Miami Beach mansion on July 15, 1997.
+So the final answer is: Shot.
+
+Question: Who is the grandchild of Dambar Shah?
+Are follow up questions needed here: Yes.
+Follow up: Who is the child of Dambar Shah?
+Intermediate answer: Dambar Shah (? - 1645) was the king of the Gorkha Kingdom. He was the father of Krishna Shah.
+Follow up: Who is the child of Krishna Shah?
+Intermediate answer: Krishna Shah (? - 1661) was the king of the Gorkha Kingdom. He was the father of Rudra Shah.
+So the final answer is: Rudra Shah.
+
+Question: Are both director of film FAQ: Frequently Asked Questions and director of film The Big Money from the same country?
+Are follow up questions needed here: Yes.
+Follow up: Who directed the film FAQ: Frequently Asked Questions?
+Intermediate answer: Carlos Atanes.
+Follow up: Who directed the film The Big Money?
+Intermediate answer: John Paddy Carstairs.
+Follow up: What is the nationality of Carlos Atanes?
+Intermediate answer: Carlos Atanes is Spanish.
+Follow up: What is the nationality of John Paddy Carstairs?
+Intermediate answer: John Paddy Carstairs is British.
+So the final answer is: No."""
+
+
+SELF_ASK_MUSIQUE = """Question: When does monsoon season end in the state the area code 575 is located?
+Are follow up questions needed here: Yes.
+Follow up: Which state is the area code 575 located in?
+Intermediate answer: The area code 575 is located in New Mexico.
+Follow up: When does monsoon season end in New Mexico?
+Intermediate answer: Monsoon season in New Mexico typically ends in mid-September.
+So the final answer is: mid-September.
+
+Question: What is the current official currency in the country where Ineabelle Diaz is a citizen?
+Are follow up questions needed here: Yes.
+Follow up: Which country is Ineabelle Diaz a citizen of?
+Intermediate answer: Ineabelle Diaz is from Peurto Rico, which is in the United States of America.
+Follow up: What is the current official currency in the United States of America?
+Intermediate answer: The current official currency in the United States is the United States dollar.
+So the final answer is: United States dollar.
+
+Question: Where was the person who founded the American Institute of Public Opinion in 1935 born?
+Are follow up questions needed here: Yes.
+Follow up: Who founded the American Institute of Public Opinion in 1935?
+Intermediate answer: George Gallup.
+Follow up: Where was George Gallup born?
+Intermediate answer: George Gallup was born in Jefferson, Iowa.
+So the final answer is: Jefferson.
+
+Question: What language is used by the director of Tiffany Memorandum?
+Are follow up questions needed here: Yes.
+Follow up: Who directed the movie called Tiffany Memorandum?
+Intermediate answer: Sergio Grieco.
+Follow up: What language is used by Sergio Grieco?
+Intermediate answer: Sergio Grieco speaks Italian.
+So the final answer is: Italian.
+
+Question: What is the sports team the person played for who scored the first touchdown in Superbowl 1?
+Are follow up questions needed here: Yes.
+Follow up: Which player scored the first touchdown in Superbowl 1?
+Intermediate answer: Max McGee.
+Follow up: Which sports team did Max McGee play for?
+Intermediate answer: Max McGee played for the Green Bay Packers.
+So the final answer is: Green Bay Packers.
+
+Question: The birth country of Jayantha Ketagoda left the British Empire when?
+Are follow up questions needed here: Yes.
+Follow up: What is the birth country of Jayantha Ketagoda?
+Intermediate answer: Sri Lanka.
+Follow up: When did Sri Lanka leave the British Empire?
+Intermediate answer: Sri Lanka left the British Empire on February 4, 1948.
+So the final answer is: February 4, 1948."""
+
+
+def get_self_ask_demos(dataset: str) -> str:
+    """Return the few-shot demonstrations to use for a given dataset.
+    HotpotQA uses the 2WikiMultiHopQA prompt per Press et al. Bamboogle precedent."""
+    ds = dataset.lower()
+    if ds in ("musique",):
+        return SELF_ASK_MUSIQUE
+    if ds in ("2wikimultihopqa", "hotpotqa"):
+        return SELF_ASK_2WIKI_HOTPOT
+    raise ValueError(f"No Self-Ask prompt configured for dataset {dataset!r}")
+
+
+# ── SPARQL CoT MuSiQue-tuned demos ────────────────────────────────
+# Constructed using the exact 6 questions from Press et al. 2022 Table 10
+# (their MuSiQue Self-Ask demonstrations). Same source questions as Self-Ask;
+# only the format is changed to SPARQL triple patterns. Same constraints as
+# our generic SPARQL CoT prompt: max 4 triple patterns, plain English
+# predicates, no URIs/FILTER/subqueries. Final answers match Press et al.'s
+# Table 10 verbatim.
+
+SPARQL_COT_MUSIQUE_DEMOS = """Question: When does monsoon season end in the state the area code 575 is located?
+
+SELECT ?answer WHERE {
+  ?state hasAreaCode "575" .
+  ?state monsoonSeasonEnd ?answer .
+}
+
+Trace:
+  ?state = New Mexico (the area code 575 is located in New Mexico)
+  ?answer = mid-September (monsoon season in New Mexico typically ends in mid-September)
+
+FINAL ANSWER: mid-September
+
+Question: What is the current official currency in the country where Ineabelle Diaz is a citizen?
+
+SELECT ?currency WHERE {
+  ?country hasCitizen "Ineabelle Diaz" .
+  ?country officialCurrency ?currency .
+}
+
+Trace:
+  ?country = United States of America (Ineabelle Diaz is from Puerto Rico, which is in the United States)
+  ?currency = United States dollar (the current official currency of the United States is the United States dollar)
+
+FINAL ANSWER: United States dollar
+
+Question: Where was the person who founded the American Institute of Public Opinion in 1935 born?
+
+SELECT ?place WHERE {
+  ?person founded "American Institute of Public Opinion in 1935" .
+  ?person bornIn ?place .
+}
+
+Trace:
+  ?person = George Gallup
+  ?place = Jefferson, Iowa (George Gallup was born in Jefferson, Iowa)
+
+FINAL ANSWER: Jefferson
+
+Question: What language is used by the director of Tiffany Memorandum?
+
+SELECT ?language WHERE {
+  ?director directed "Tiffany Memorandum" .
+  ?director speaksLanguage ?language .
+}
+
+Trace:
+  ?director = Sergio Grieco
+  ?language = Italian (Sergio Grieco speaks Italian)
+
+FINAL ANSWER: Italian
+
+Question: What is the sports team the person played for who scored the first touchdown in Superbowl 1?
+
+SELECT ?team WHERE {
+  ?player scoredFirstTouchdown "Superbowl 1" .
+  ?player playedFor ?team .
+}
+
+Trace:
+  ?player = Max McGee
+  ?team = Green Bay Packers (Max McGee played for the Green Bay Packers)
+
+FINAL ANSWER: Green Bay Packers
+
+Question: The birth country of Jayantha Ketagoda left the British Empire when?
+
+SELECT ?date WHERE {
+  ?country bornCountryOf "Jayantha Ketagoda" .
+  ?country leftBritishEmpire ?date .
+}
+
+Trace:
+  ?country = Sri Lanka
+  ?date = February 4, 1948 (Sri Lanka left the British Empire on February 4, 1948)
+
+FINAL ANSWER: February 4, 1948"""
+
+
 # ── Checkpointing helpers ─────────────────────────────────────────
 
 def _load_checkpoint(path):
@@ -149,13 +344,22 @@ def classify_question_type(question: str) -> str:
 
 
 def answer_with_sparql_cot(client, model, question, context,
-                           max_tokens=512, temperature=0.0):
+                           max_tokens=512, temperature=0.0,
+                           prompt_variant='generic'):
     """Answer a question by first reformulating as SPARQL (chain-of-thought).
 
     Single LLM call: the model writes a SPARQL query to trace relationships,
     then extracts the final answer. Returns (answer, sparql) tuple.
+
+    prompt_variant:
+      'generic'        the published prompt with one inline syntax example
+                       (Paradise Creek). Used for HotpotQA, 2WikiMHQA, MuSiQue.
+      'musique_tuned'  appends 6 worked Q+A demonstrations using the same
+                       source questions as Press et al.'s Self-Ask MuSiQue
+                       prompt (Table 10), reformatted as SPARQL CoT. Tests
+                       whether dataset-tuning closes the gap with Self-Ask.
     """
-    prompt = (
+    base = (
         "You are answering a multi-hop question using ONLY the provided context.\n\n"
         "Step 1: Write a simple SPARQL query (max 4 triple patterns, plain English\n"
         "predicates, NO URIs, NO FILTER, NO subqueries). Example:\n"
@@ -167,9 +371,21 @@ def answer_with_sparql_cot(client, model, question, context,
         "Step 2: Follow the SPARQL chain step by step through the context.\n"
         "Step 3: Write FINAL ANSWER: <your answer in a few words>\n\n"
         "If the answer is not in the context, write FINAL ANSWER: I don't know\n\n"
-        f"CONTEXT:\n{context}\n\n"
-        f"QUESTION:\n{question}"
     )
+    if prompt_variant == 'musique_tuned':
+        prompt = (
+            base
+            + "Examples (note the SPARQL query, the variable-binding trace, "
+              "and the FINAL ANSWER format):\n\n"
+            + SPARQL_COT_MUSIQUE_DEMOS
+            + "\n\n"
+            + f"CONTEXT:\n{context}\n\n"
+            + f"QUESTION:\n{question}"
+        )
+    elif prompt_variant == 'generic':
+        prompt = base + f"CONTEXT:\n{context}\n\n" + f"QUESTION:\n{question}"
+    else:
+        raise ValueError(f"unknown prompt_variant {prompt_variant!r}")
     raw = call_groq_chat(client, model,
                          [{"role": "user", "content": prompt}],
                          max_tokens=max_tokens, temperature=temperature)
@@ -216,6 +432,53 @@ def answer_with_generic_cot(client, model, question, context,
         if candidate and not candidate.startswith("<"):
             answer = candidate
     return answer, raw
+
+
+def answer_with_self_ask(client, model, question, context, dataset,
+                         max_tokens=2048, temperature=0.0,
+                         demos_dataset=None):
+    """Single-call Self-Ask (Press et al. 2022).
+
+    Faithful reproduction. Few-shot demonstrations (4-shot for HotpotQA and
+    2WikiMultiHopQA, 6-shot for MuSiQue) are taken verbatim from the paper's
+    Tables 13 and 10. The only adaptation for our retrieval-grounded setting
+    is a labeled context block inserted between the demonstrations and the
+    test question. The prompt ending follows footnote 4 of Press et al.: for
+    smaller-than-Davinci models we append "Are follow up questions needed
+    here: Yes.\\nFollow up:" to encourage decomposition. Both Llama-3.1-8B
+    and Llama-3.3-70B are smaller than Davinci-002 (175B).
+
+    Final-answer extraction handles both Press et al.'s "So the final answer
+    is: X" and our existing "FINAL ANSWER: X" form. If neither is found
+    (model ran out of tokens before completing), we treat as abstain.
+
+    `demos_dataset`: optionally override which dataset's demonstrations to use,
+    independently of the test set. Used for prompt-transfer experiments
+    (e.g., Self-Ask on MuSiQue using the 2WikiMHQA prompt, matching Press et
+    al.'s Bamboogle precedent of "no prompt tuning"). Defaults to `dataset`.
+    Returns (answer, raw) tuple.
+    """
+    demos = get_self_ask_demos(demos_dataset or dataset)
+    prompt = (
+        f"{demos}\n\n"
+        f"Context:\n{context}\n\n"
+        f"Question: {question}\n"
+        f"Are follow up questions needed here: Yes.\n"
+        f"Follow up:"
+    )
+    raw = call_groq_chat(client, model,
+                         [{"role": "user", "content": prompt}],
+                         max_tokens=max_tokens, temperature=temperature)
+    # Press et al.'s phrasing first
+    matches = re.findall(r'(?i)So\s+the\s+final\s+answer\s+is\s*:\s*([^\n]+)', raw)
+    if not matches:
+        matches = re.findall(r'(?i)FINAL\s*ANSWER\s*:\s*([^\n]+)', raw)
+    if matches:
+        candidate = matches[-1].strip().rstrip('.').strip()
+        if candidate and not candidate.startswith("<"):
+            return candidate, raw
+    # No extractable final answer (e.g., truncated mid-reasoning). Abstain.
+    return "I don't know", raw
 
 
 def is_abstain(pred: str) -> bool:
@@ -626,6 +889,152 @@ def compress_context_graph_walk(question: str, context: str,
     }
 
 
+# ── Alternative compression baselines (for eQxk #4 ablation) ───────
+# These mirror the GW interface so they can be swapped in via run.py's
+# --compression flag. Each returns a (compressed_context, meta) tuple.
+
+def compress_context_truncate(context: str, budget_tokens: int = 4000) -> tuple:
+    """Trivial baseline: take the first ~budget_tokens of context (4 chars/token
+    estimate). Truncate at the nearest paragraph break before the cap when one
+    exists in the last 20%; otherwise hard-cut."""
+    char_budget = budget_tokens * 4
+    if len(context) <= char_budget:
+        return context, {
+            "mode": "truncate",
+            "orig_words": _estimate_words(context),
+            "new_words": _estimate_words(context),
+        }
+    cut = context.rfind("\n\n", int(char_budget * 0.8), char_budget)
+    if cut < 0:
+        cut = char_budget
+    truncated = context[:cut]
+    return truncated, {
+        "mode": "truncate",
+        "orig_words": _estimate_words(context),
+        "new_words": _estimate_words(truncated),
+    }
+
+
+def _chunk_context_for_topk(context: str) -> list:
+    """Split KET-RAG-style context into rankable chunks. Each non-header line
+    of the structured blocks (entities, relationships, sources) is one chunk;
+    each paragraph of a text source is its own chunk. Section headers and
+    column headers are skipped."""
+    chunks = []
+    SKIP_PREFIXES = ("-----", "id|")
+    for raw_block in context.split("\n\n"):
+        block = raw_block.strip()
+        if not block:
+            continue
+        for line in block.split("\n"):
+            line = line.strip()
+            if not line or line == "[]":
+                continue
+            if any(line.startswith(p) for p in SKIP_PREFIXES):
+                continue
+            chunks.append(line)
+    return chunks
+
+
+def compress_context_topk_embedding(question: str, context: str, embedder,
+                                    budget_tokens: int = 4000) -> tuple:
+    """Top-k chunks by cosine similarity to the question. `embedder` must be a
+    sentence-transformers model (or any object with .encode(list)->ndarray).
+    Greedy fill until budget; selected chunks are re-sorted by original
+    position for coherence."""
+    chunks = _chunk_context_for_topk(context)
+    if not chunks:
+        return context[:budget_tokens * 4], {
+            "mode": "topk_empty",
+            "orig_words": _estimate_words(context),
+            "new_words": _estimate_words(context[:budget_tokens * 4]),
+        }
+    # Embed and rank
+    chunk_embs = embedder.encode(chunks, normalize_embeddings=True,
+                                 show_progress_bar=False)
+    q_emb = embedder.encode([question], normalize_embeddings=True,
+                            show_progress_bar=False)[0]
+    sims = chunk_embs @ q_emb
+    order = np.argsort(-sims)
+
+    char_budget = budget_tokens * 4
+    selected = []  # (original_index, text)
+    used = 0
+    for idx in order:
+        c = chunks[int(idx)]
+        if used + len(c) + 2 > char_budget:
+            continue
+        selected.append((int(idx), c))
+        used += len(c) + 2
+        if used >= char_budget * 0.95:
+            break
+    # Restore original order so the assembled context isn't shuffled
+    selected.sort(key=lambda x: x[0])
+    out = "\n\n".join(c for _, c in selected)
+    return out, {
+        "mode": "topk_embed",
+        "orig_chunks": len(chunks),
+        "selected_chunks": len(selected),
+        "orig_words": _estimate_words(context),
+        "new_words": _estimate_words(out),
+    }
+
+
+def build_truncated_context_lookup(qa_list: list, context_lookup: dict,
+                                   budget_tokens: int = 4000) -> tuple:
+    """Mirror of build_graph_compressed_context_lookup but using truncation."""
+    out = {}
+    orig_sum, new_sum = 0, 0
+    for q in qa_list:
+        qid = str(q["id"])
+        context = context_lookup.get(qid, "")
+        compressed, meta = compress_context_truncate(context, budget_tokens)
+        out[qid] = compressed
+        orig_sum += meta["orig_words"]
+        new_sum += meta["new_words"]
+    n = len(qa_list)
+    return out, {
+        "n_total": n,
+        "avg_orig": orig_sum / n if n else 0,
+        "avg_new": new_sum / n if n else 0,
+        "mode": "truncate",
+    }
+
+
+def build_topk_embedding_context_lookup(qa_list: list, context_lookup: dict,
+                                        embedder, budget_tokens: int = 4000) -> tuple:
+    """Mirror of build_graph_compressed_context_lookup using top-k embedding sim."""
+    out = {}
+    t0 = time.time()
+    total = len(qa_list)
+    orig_sum, new_sum = 0, 0
+    chunk_kept_sum, chunk_total_sum = 0, 0
+    for i, q in enumerate(qa_list):
+        qid = str(q["id"])
+        question = str(q["question"])
+        context = context_lookup.get(qid, "")
+        compressed, meta = compress_context_topk_embedding(
+            question, context, embedder, budget_tokens=budget_tokens)
+        out[qid] = compressed
+        orig_sum += meta["orig_words"]
+        new_sum += meta["new_words"]
+        chunk_kept_sum += meta.get("selected_chunks", 0)
+        chunk_total_sum += meta.get("orig_chunks", 0)
+        if (i + 1) % 25 == 0 or i + 1 == total:
+            elapsed = time.time() - t0
+            print(f"  [topk-embed] {i+1}/{total} elapsed={elapsed:.1f}s "
+                  f"chunks={meta.get('selected_chunks',0)}/{meta.get('orig_chunks',0)} "
+                  f"words={meta['orig_words']}->{meta['new_words']}")
+    return out, {
+        "n_total": total,
+        "avg_orig": orig_sum / total if total else 0,
+        "avg_new": new_sum / total if total else 0,
+        "avg_chunks_kept": chunk_kept_sum / total if total else 0,
+        "avg_chunks_total": chunk_total_sum / total if total else 0,
+        "mode": "topk_embed",
+    }
+
+
 def build_graph_compressed_context_lookup(qa_list: list, context_lookup: dict,
                                           max_hops: int = 3,
                                           budget_tokens: int = 4000) -> tuple:
@@ -1014,8 +1423,14 @@ def run_sparql(
     temperature: float = 0.0,
     limit: int = None,
     checkpoint_path=None,
+    prompt_variant: str = 'generic',
 ):
-    """Answer via SPARQL chain-of-thought reformulation. Returns a DataFrame."""
+    """Answer via SPARQL chain-of-thought reformulation. Returns a DataFrame.
+    prompt_variant: 'generic' (default) or 'musique_tuned'. See
+    answer_with_sparql_cot for details."""
+    # max_tokens needs more headroom when the prompt variant adds 6 worked
+    # demonstrations (~1.5k tokens of demos) — match the Self-Ask budget.
+    max_tokens = 2048 if prompt_variant == 'musique_tuned' else 512
     rows, done_ids = _load_checkpoint(checkpoint_path)
     total = min(len(qa_list), limit) if limit else len(qa_list)
     t0 = time.time()
@@ -1028,8 +1443,10 @@ def run_sparql(
         question = q["question"]
         gold = get_gold(q)
         context = context_lookup.get(qid, "")
-        pred, raw_cot = answer_with_sparql_cot(client, model, question, context,
-                                               temperature=temperature)
+        pred, raw_cot = answer_with_sparql_cot(
+            client, model, question, context,
+            temperature=temperature, max_tokens=max_tokens,
+            prompt_variant=prompt_variant)
         row = {
             "qa_model": model, "id": qid, "question": question, "gold": gold,
             "context_chars": len(context), "sparql_cot": raw_cot,
@@ -1039,7 +1456,7 @@ def run_sparql(
         _append_checkpoint(checkpoint_path, row)
         elapsed = time.time() - t0
         q_safe = question[:50].encode("ascii", "replace").decode()
-        print(f"  [sparql] {i+1}/{total}  elapsed={elapsed:.1f}s  q={q_safe}")
+        print(f"  [sparql:{prompt_variant}] {i+1}/{total}  elapsed={elapsed:.1f}s  q={q_safe}")
     return pd.DataFrame(rows)
 
 
@@ -1078,6 +1495,53 @@ def run_generic_cot(
         elapsed = time.time() - t0
         q_safe = question[:50].encode("ascii", "replace").decode()
         print(f"  [generic_cot] {i+1}/{total}  elapsed={elapsed:.1f}s  q={q_safe}")
+    return pd.DataFrame(rows)
+
+
+def run_self_ask(
+    client,
+    model: str,
+    qa_list: list,
+    context_lookup: dict,
+    dataset: str,
+    temperature: float = 0.0,
+    limit: int = None,
+    checkpoint_path=None,
+    demos_dataset: str = None,
+    max_tokens: int = 2048,
+):
+    """Run single-call Self-Ask (Press et al. 2022) over a list of questions.
+    `dataset` selects the few-shot demonstrations: 'musique' uses Table 10
+    (6-shot); 'hotpotqa' and '2wikimultihopqa' use Table 13 (4-shot).
+    `demos_dataset` (optional): override which dataset's demonstrations to use,
+    independently of the test set. For prompt-transfer experiments matching
+    Press et al.'s Bamboogle precedent of "no prompt tuning"."""
+    rows, done_ids = _load_checkpoint(checkpoint_path)
+    total = min(len(qa_list), limit) if limit else len(qa_list)
+    t0 = time.time()
+    for i, q in enumerate(qa_list):
+        if limit is not None and i >= limit:
+            break
+        qid = str(q["id"])
+        if qid in done_ids:
+            continue
+        question = q["question"]
+        gold = get_gold(q)
+        context = context_lookup.get(qid, "")
+        pred, raw_cot = answer_with_self_ask(
+            client, model, question, context, dataset,
+            temperature=temperature, demos_dataset=demos_dataset,
+            max_tokens=max_tokens)
+        row = {
+            "qa_model": model, "id": qid, "question": question, "gold": gold,
+            "context_chars": len(context), "self_ask": raw_cot,
+            "final_pred": pred, "final_abstain": is_abstain(pred),
+        }
+        rows.append(row)
+        _append_checkpoint(checkpoint_path, row)
+        elapsed = time.time() - t0
+        q_safe = question[:50].encode("ascii", "replace").decode()
+        print(f"  [self_ask] {i+1}/{total}  elapsed={elapsed:.1f}s  q={q_safe}")
     return pd.DataFrame(rows)
 
 
